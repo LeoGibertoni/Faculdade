@@ -1,0 +1,70 @@
+using System;
+
+namespace Calculadora_de_dois_numeros
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string operacao;
+            int opcao = 0;
+            float n1 = 0, n2 = 0, resultado = 0;
+
+            Console.WriteLine("\nCalculadora...");
+
+            do
+            {
+                Console.WriteLine("Selecione a operação que deseja: \n");
+                Console.WriteLine("1 - Adição\n2 - Subtração\n3 - Multiplicação\n4 - Divisão\n");
+
+                Console.Write("Escolha a opção: \n");
+                opcao = int.Parse(Console.ReadLine());
+                Console.Write("Informe o n1: ");
+                n1 = float.Parse(Console.ReadLine());
+                Console.Write("Informe o n2: ");
+                n2 = float.Parse(Console.ReadLine());
+
+
+                if (opcao == 1)
+                {
+                    resultado = n1 + n2;
+                    Console.WriteLine($"A subtração é: {resultado:f2}");
+                }
+                else if (opcao == 2)
+                {
+
+                    resultado = n1 - n2;
+                    Console.WriteLine($"A subtração é: {resultado:f2}");
+                }
+                else if (opcao == 3)
+                {
+
+                    resultado = n1 * n2;
+                    Console.WriteLine($"A multiplicação é: {resultado:f2}");
+                }
+                else
+                {
+
+                    if (n2!=0)
+                    {
+                        resultado = n1 / n2;
+                        Console.WriteLine($"A divisão é: {resultado:f2}");
+                    }
+                    else
+                    {
+                        Console.WriteLine("A divisão não é divisivel por 0!");
+                    }
+                }
+
+                Console.Write("\nVocê quer fazer outra operação? sim/nao: ");
+                operacao = Console.ReadLine();
+
+            }
+            while (operacao == "sim");
+
+            Console.WriteLine("Obrigado!");
+            
+         Console.ReadKey();
+        }
+    }
+}

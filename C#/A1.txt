@@ -1,0 +1,54 @@
+Exercícios com "for"
+1. Soma dos Quadrados
+Crie um programa que peça um número inteiro positivo ao usuário e calcule a soma dos 
+quadrados de todos os números de 1 até o número informado.
+Observações:
+ - Usar a estrutura de repetição "for".
+ - Utilizar a operação de potência ao quadrado (número * número).
+ - Acumular o resultado em uma variável (ex.: soma += número * número).
+Saída Exemplo:
+Digite um número positivo: 4
+Soma dos quadrados: 30
+(Cálculo: 1^2 + 2^2 + 3^2 + 4^2 = 30)
+
+
+namespace pipipi
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int numero = 0; //salva variavel inteira
+
+            Console.WriteLine("Informe um numero inteiro positivo: "); //imprime a pergunta
+            numero = int.Parse(Console.ReadLine()); //salva a variavel
+
+            int soma = 0; //salva variavel inteira
+
+            for (int i = 1; i <= numero; i++) //i = 1, i sendo menor ou igual a numero dado ele repete
+            {
+                soma += i * i; //soma é igual a i = 1; *
+            }
+
+            Console.WriteLine($"Soma dos quadrados: {soma}");
+
+        }
+    }
+}
+              |
+SALVAR V
+
+soma += i * i;
+
+Primeira iteração (i = 1):
+
+soma += 1 * 1 → soma = 0 + 1 → soma = 1
+Segunda iteração (i = 2):
+
+soma += 2 * 2 → soma = 1 + 4 → soma = 5
+Terceira iteração (i = 3):
+
+soma += 3 * 3 → soma = 5 + 9 → soma = 14
+Quarta iteração (i = 4):
+
+soma += 4 * 4 → soma = 14 + 16 → soma = 30

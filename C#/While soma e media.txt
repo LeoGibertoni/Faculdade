@@ -1,0 +1,33 @@
+using System;
+
+namespace While___soma_de_numeros_positivos__
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int num = 0, soma = 0, media = -1, mediafinal = 0; //media -1 para o ultimo numero não contar
+
+            Console.WriteLine("Bem-vindo, Essa bagaça soma numeros!"); //imprime
+            Console.WriteLine("Informe um numero positivo!"); //imprime
+            Console.WriteLine("Se informar um numero menor que 0, o programa finaliza!\n"); //imprime e pula linha
+
+            do //se o valor for maior que 0 entra no while
+            {
+                media = media + 1; //soma a quantidade de numeros
+                soma = soma + num; //faz a soma
+                Console.Write("Informe o valor: ");  //imprime
+                num = int.Parse(Console.ReadLine()); //salva o 
+                
+            }
+            while (num > 0); //enquanto o numero for maior que 0, continua repetindo
+
+            mediafinal = soma / media; //conta da 
+
+            Console.WriteLine($"\nA soma é {soma}"); //imprime e mostra o resultado quando digitaram numero menor que 0
+            Console.WriteLine($"A media é {mediafinal:f2}"); //imprime a media
+
+            Console.ReadKey();
+        }
+    }
+}

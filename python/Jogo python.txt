@@ -1,0 +1,67 @@
+import random 
+
+resposta = 'sim'
+
+print("Bem vindo ao RPG")
+print("Para começar irei informar suas caracteristicas")
+
+input("\nEnter para avançar!\n")
+
+print('''Vitalidade: 100
+força: 100
+mana: 50
+sorte: 10''')
+
+input("\nEnter para avançar!\n")
+
+#usuario
+vitalidade = 100
+forca = 100
+mana = 50
+sorte = 10
+
+#oponente
+vitalidade1 = 100
+forca1 = 100
+mana1 = 50
+sorte1 = 10
+
+while (resposta == 'sim'):
+    #vez do oponente
+    print("Você entrou em uma batalha!")
+    
+    if (vitalidade > 0 and vitalidade1 > 0):
+        print("O inimigo começa atacando!\n")
+
+        #dano oponente
+        dano_oponente = random.randint(5,15)
+        print(f"Você sofreu {dano_oponente} de dano!")
+        vitalidade = vitalidade - dano_oponente
+        sorte1 = random.randint(1,10) #critico
+        if (sorte1 > 8):
+            print("você causou um dano critico!")
+            dano = random.randint(30, 50)
+            print(f"Oponente causou {dano} de dano critico!\n")
+            vitalidade = vitalidade - dano
+        print(f"Você ficou com {vitalidade} de vida!\n")
+
+        input("\nEnter para avançar!\n")
+
+        #vez do usuario
+        print("Agora é sua vez!")
+        dano = random.randint(15, 25)
+        print(f"Você causou {dano} de dano!")
+        vitalidade1 = vitalidade1 - dano
+        sorte = random.randint(1,10) #critico
+        if (sorte > 8):
+            print("você causou um dano critico!")
+            dano = random.randint(30, 50)
+            print(f"Você causou {dano} de dano critico!\n")
+            vitalidade1 = vitalidade1 - dano
+        print(f"Oponente ficou com {vitalidade1} de vida!")
+
+        resposta = input("Quer continuar a batalha (sim/não): ")
+        
+    else:
+        print("Fim da batalha")
+        break

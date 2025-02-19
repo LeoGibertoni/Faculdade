@@ -1,0 +1,94 @@
+using System;
+
+using System.Collections.Generic;
+
+using System.Linq;
+
+using System.Text;
+
+using System.Threading.Tasks;
+ 
+namespace ConsoleApplication1
+
+{
+
+    class Program
+
+    {
+
+        static void Main(string[] args)
+
+        {
+
+            string nome,nome1, senha, senha2; ;
+ 
+            Console.WriteLine("Cadastro de conta");
+
+            Console.Write("Informe o nome de usuario: ");//salva o nome de usuario cadastrado
+
+            nome = Console.ReadLine();
+ 
+            Console.Write("Informe a senha de cadastro: ");//salva a senha de usuario cadastrado
+
+            senha = (Console.ReadLine());
+ 
+            Console.WriteLine("");
+ 
+            Console.WriteLine("Vamos logar na sua conta!");
+ 
+            Console.WriteLine("");
+ 
+            Console.Write("Informe o login: ");//informa o login
+
+            nome1 = Console.ReadLine();
+ 
+            Console.Write("Informe sua senha: ");//informa a senha
+
+            senha2 = (Console.ReadLine());
+
+            Console.WriteLine("");
+ 
+            if (nome == nome1 && senha == senha2)//se der igual vai liberar acesso
+
+            {
+
+                Console.Write("Acesso liberado!");
+
+            }
+
+            else if (nome == nome1 || senha == senha2)//se der diferente não vai liberar acesso
+
+                                                      //pode usar só else e não precisará fazer o if
+
+            {
+
+                Console.Write("Acesso não liberado: ");
+ 
+                if (nome != nome1)
+
+                {
+
+                    Console.WriteLine("Login incorreto!");//Aparecer nome incorreto
+
+                }
+ 
+                else if (senha != senha2)
+
+                { 
+
+                    Console.WriteLine("Senha incorreta!");//Aparecer senha incorreto
+
+                }
+
+                    };
+ 
+ 
+            Console.ReadKey();
+
+        }
+
+    }
+
+}
+
+ 

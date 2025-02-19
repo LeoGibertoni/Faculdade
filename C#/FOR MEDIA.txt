@@ -1,0 +1,81 @@
+using System.Globalization;
+using System.Runtime.InteropServices;
+using System.Runtime.Intrinsics.X86;
+using System.Runtime.Serialization;
+
+namespace Projeto_de_media_de_sala
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            ////crie um programa para calcular a media aritmética dos alunos de uma sala, ao final também deverá ser exibido a média das medias da sala
+            ///obter quantidade alunos, nome, quantidade de notas.
+
+            float qnt_nota = 0, nota = 0, media = 0, soma = 0, media_sala = 0;
+            int alunos = 0, aprovado = 0, reprovado = 0;
+            string nome;
+
+            Console.Write("Quantos alunos há em sala de aula: "); //Recebe quantidade de aluno
+            alunos = int.Parse(Console.ReadLine()); //Salva a quantidade
+
+            Console.WriteLine("");
+
+            for (int i = 1; i <= alunos; i++) //Repetição de alunos
+            {
+                Console.Write("Informe o nome: "); //informa o nome
+                nome = Console.ReadLine(); //salva o nome
+
+                Console.Write($"Quantas notas contem esse aluno: "); //Quantidade de notas esté aluno contem
+                qnt_nota = float.Parse(Console.ReadLine()); //salva a quantidade de notas
+                soma = 0;
+
+                Console.WriteLine("");
+
+                for (int j = 1; j <= qnt_nota; j++) //repete a quantidade de notas
+                {
+                    Console.Write($"Digite a nota {j} de {nome}: "); //Informa a nota
+                    nota = float.Parse(Console.ReadLine()); //salva a 
+                    soma += nota;
+                }
+
+                media = soma / qnt_nota; //calcula a media do aluno
+                media_sala += media / alunos; //calcula a media da sala
+
+
+                if (media >= 6) //se media menor igual a 6
+                   {
+                    Console.WriteLine(""); //pula linha
+                    Console.ForegroundColor = ConsoleColor.Blue; //pinta para azul
+                    Console.WriteLine($"A medía do aluno é: {media:f2}"); //media do aluno é:
+                    Console.WriteLine("Aprovado!"); //aprovado
+                    aprovado = aprovado + 1; //salva a quantidade de aprovado
+                    Console.ResetColor(); //reseta a cor
+                    Console.WriteLine(""); //pula linha
+                }
+
+                else //senao
+                {
+                    Console.WriteLine(""); //pula linha
+                    Console.ForegroundColor = ConsoleColor.Red; //pinta para vermelho
+                    Console.WriteLine($"A medía do aluno é: {media:f2}"); //media do aluno é:
+                    Console.WriteLine("Reprovado!"); //reprovado
+                    reprovado = reprovado + 1; //salva a quantidade de reprovado
+                    Console.ResetColor(); //reseta cor
+                    Console.WriteLine(""); //pula linha
+                }
+            }
+            Console.ForegroundColor = ConsoleColor.Green; //pinta de verde
+            Console.WriteLine($"Media da sala é: {media_sala:f2}"); //mostra a media da sala
+            Console.ResetColor(); //reseta cor
+            Console.WriteLine(""); //pula linha
+            Console.ForegroundColor = ConsoleColor.Blue; //pinta pra azul
+            Console.WriteLine($"A quantidade de alunos aprovados é: {aprovado}"); //mostra quantidade de aprovado
+            Console.ResetColor(); //reseta cor
+            Console.ForegroundColor = ConsoleColor.Red; //pinta pra vermelho
+            Console.WriteLine($"A quantidade de alunos reprovados é: {reprovado}"); //mostra a quantidade de reprovado
+            Console.ResetColor(); //reseta cor
+            Console.ReadKey(); //aperte para rodar
+        }
+    }
+}

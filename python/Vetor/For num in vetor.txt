@@ -1,0 +1,13 @@
+Exemplo Prático
+Se tivermos um vetor assim:
+
+python
+Copiar código
+vetor = [2, 3, 4]
+O código funcionará da seguinte forma:
+
+Inicialização: produtorio = 1
+Primeira Iteração: produtorio *= 2 → produtorio = 1 * 2 = 2
+Segunda Iteração: produtorio *= 3 → produtorio = 2 * 3 = 6
+Terceira Iteração: produtorio *= 4 → produtorio = 6 * 4 = 24
+No final, o valor de produtorio será 24, que é o produto dos elementos do vetor [2, 3, 4].

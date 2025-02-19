@@ -1,0 +1,91 @@
+namespace Treino
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int funcionario = 0, rh = 0, vendas = 0, compras = 0, outros = 0, departamento = 0;
+            int salariomenor = 0,salariomin = 0, salariomed = 0, salariorico = 0;
+            float salario = 0, media = 0, salariototal = 0;
+            string nome;
+
+            Console.Write("Quantos funcionarios tem na empresa: ");
+            funcionario = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < funcionario; i++)
+            {
+                Console.Write("\nQual seu nome: ");
+                nome = Console.ReadLine();
+
+                Console.WriteLine($"\n{nome} de qual departamento você é \n1 - RH, \n2 - Vendas \n3 - Compras \n4 - Outros");
+                do
+                {
+                    Console.Write("\nDigite o numero do departamento: ");
+                    departamento = int.Parse(Console.ReadLine());
+                }
+                while (departamento < 1 || departamento > 4);
+
+                if (departamento == 1)
+                {
+                    Console.WriteLine("Você é da area de RH!");
+                    rh++;
+                }
+                else if (departamento == 2)
+                {
+                    Console.WriteLine("Você é da area de vendas!");
+                    vendas++;
+                }
+                else if (compras == 3)
+                {
+                    Console.WriteLine("Você é da area de compras!");
+                    compras++;
+                }
+                else
+                {
+                    Console.WriteLine("Você é de outro setor!");
+                    outros++;
+                }
+
+                Console.WriteLine("\nAgora precisarei saber quanto você recebe!");
+                Console.Write("Quanto você ganha por mês: ");
+                salario = float.Parse(Console.ReadLine());
+                salariototal += salario;
+
+                if (salario < 1400)
+                {
+                    Console.WriteLine("Recebe menos que um salario minimo!");
+                    salariomenor++;
+                }
+                else if (salario >= 1400 && salario <= 2799) 
+                {
+                    Console.WriteLine("Você recebe 1 salario minimo!");
+                    salariomin++;
+                }
+                else if (salario >= 2800 && salario <= 6999)
+                {
+                    Console.WriteLine("Você recebe de 2 a 5 salarios minimos!");
+                    salariomed++;
+                }
+                else
+                {
+                    Console.WriteLine("Você recebe mais de 5 salarios minimos!");
+                    salariorico++;
+                }
+
+
+            }
+
+            media = salariototal / funcionario;
+
+            Console.WriteLine("\nObrigado pelas informações!");
+            Console.WriteLine($"\nHá {funcionario} na empresa, media salarial {media}$");
+            Console.WriteLine($"tem {rh} no departamento de RH!");
+            Console.WriteLine($"tem {vendas} no departamento de Vendas!");
+            Console.WriteLine($"tem {compras} no departamento de Compras!");
+            Console.WriteLine($"tem {outros} no departamento de Outros!");
+            Console.WriteLine($"tem {salariomin} funcionarios que recebe 1 salario minimo ");
+            Console.WriteLine($"tem {salariomed} funcionarios que recebe 2 a 5 salarios minimos ");
+            Console.WriteLine($"tem {salariorico} funcionarios que recebe mais que 5 salarios minimos ");
+        }
+    }
+}

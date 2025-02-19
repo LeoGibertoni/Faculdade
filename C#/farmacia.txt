@@ -1,0 +1,90 @@
+using System;
+ 
+namespace pipipi
+{
+    class Program
+    {
+ 
+ 
+        static void Main(string[] args)
+        {
+ 
+            double valor, desconto, fidelidade, valor_final, porcentagem, valor_desconto, valor_fidelidade;
+            int idade;
+            string nome,sim;
+ 
+            Console.WriteLine("Bem vindo a farmacia...");
+            Console.WriteLine("");
+            Console.Write("Digite o seu nome: ");//digita nome
+            nome = Console.ReadLine();//salva nome
+ 
+            Console.Write("Digite a sua idade: ");//digita idade
+            idade = int.Parse(Console.ReadLine());//salva idade
+ 
+            Console.Write("Digite o valor: ");//digita valor
+            valor = double.Parse(Console.ReadLine());//salva valor
+ 
+            Console.WriteLine("");
+ 
+            Console.WriteLine($"Seu nome é {nome}");//fala o nome
+            Console.WriteLine($"Sua idade é {idade}");//fala a idade
+            Console.WriteLine($"O valor digitado é {valor}");//fala o valor
+            Console.WriteLine("");
+            if (idade <= 60)
+            {
+                Console.WriteLine($"{nome} você tem 0% de desconto por conta da idade!"); //0% desconto abaixo de 60 anos
+                desconto = valor;
+                porcentagem = valor;
+                valor_desconto = 0;//valor do desconto
+            }
+            else if (idade >= 61 && idade < 70) 
+            {
+                Console.WriteLine($"{nome} você tem 5% de desconto por conta da idade!"); //5% desconto entre 61 e 70 anos
+                desconto = valor * 0.05;//conta do desconto
+                porcentagem = valor - desconto;//conta que tira o desconto do valor total
+                valor_desconto = desconto;//valor do desconto
+            }
+            else
+            {
+                Console.WriteLine($"{nome} você tem 7% de desconto por conta da idade!"); //7% desconto acima de 70 anos
+                desconto = valor * 0.07;//conta do desconto
+                porcentagem = valor - desconto;//conta que tira o desconto do valor total
+                valor_desconto = desconto;//valor do desconto
+            }
+ 
+            Console.WriteLine("");
+ 
+            Console.Write("Você tem cartão de fidelidade (sim/nao): "); //ve se tem cartão fidelidade
+            sim = Console.ReadLine();
+ 
+            Console.WriteLine("");
+ 
+            if ("sim" == sim)
+            {
+                Console.WriteLine("Você tem 5% de desconto com o cartão de fidelidade"); //5% desconto com cartao
+                fidelidade = valor * 0.05;//conta do desconto
+                valor_final = porcentagem-fidelidade;//conta que tira o desconto do valor total
+                valor_fidelidade = fidelidade;//valor do desconto
+            }
+            else
+            {
+                Console.WriteLine($"{nome} você não tem desconto, sem cartão de fidelidade!"); //0% desconto sem cartao
+                fidelidade = valor;
+                valor_final = porcentagem;
+                valor_fidelidade = 0; //valor do desconto
+            }
+ 
+            Console.WriteLine("");
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.BackgroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("Criando nota fiscal...");
+            Console.WriteLine($"Desconto de R$:{valor_desconto} idade");
+            Console.WriteLine($"Desconto de R$:{valor_fidelidade} cartão fidelidade");
+ 
+          
+            Console.WriteLine($"{nome} seu valor final é: R$:{valor_final:f2}");
+ 
+            Console.ReadKey();
+        }
+    }
+}

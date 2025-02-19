@@ -1,0 +1,61 @@
+namespace Controle_de_funcionario
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int qtd_funcionario = 0, qtd_filhos = 0, pobre = 0, medio = 0, rico = 0, soma = 0;
+            double salario = 0, media_filhos = 0;
+            string nome;
+
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write("Quantos funcionario(s) tem na empresa: ");
+            qtd_funcionario = int.Parse(Console.ReadLine());
+
+            for (int i=1; i <= qtd_funcionario; i++)
+            {
+                Console.WriteLine("");
+                Console.Write($"Qual o nome do funcionario {i}: ");
+                nome = Console.ReadLine();
+
+                Console.Write($"Quantos filhos {nome} tem: ");
+                qtd_filhos = int.Parse(Console.ReadLine());
+                soma = soma + qtd_filhos;
+
+                Console.Write($"Quantos reais {nome} ganha: ");
+                salario = double.Parse(Console.ReadLine());
+
+                Console.WriteLine("");
+
+                if (salario < 2824)
+                {
+                    Console.WriteLine($"O salario do {nome} é {salario}, recebe 1 salário minimo");
+                    pobre++;
+                }
+
+                else if (salario >= 2824 && salario < 7060)
+                {
+                    Console.WriteLine($"O salario do {nome} é {salario}, recebe 2 a 5 salários minimo");
+                    medio++;
+                }
+                else
+                {
+                    Console.WriteLine($"O salario do {nome} é {salario}, recebe mais 5 salários minimo");
+                    rico++;
+                }
+            }
+
+            media_filhos = soma / qtd_funcionario;
+
+            Console.WriteLine("");
+
+            Console.WriteLine($"A media de funcionarios que recebe 1 salario minimo é: {pobre}");
+            Console.WriteLine($"A media de funcionarios que recebe 1 salario minimo é: {medio}");
+            Console.WriteLine($"A media de funcionarios que recebe 1 salario minimo é: {rico}");
+            Console.WriteLine($"A media de filhos dos funcionarios é: {media_filhos:f2}");
+
+            Console.WriteLine("");
+            Console.ReadKey();
+        }
+    }
+}

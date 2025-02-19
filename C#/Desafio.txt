@@ -1,0 +1,55 @@
+using System;
+using System.Xml.Serialization;
+
+namespace Desafio_caraii
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int vida = 1000, dano_win = 2;
+            Random random = new Random();
+
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            Console.WriteLine("Bem vindo ao jogo de adivinhação!");
+            Console.WriteLine("Você tem 1000 pontos");
+            Console.WriteLine("Adivinhe um número de 1 a 100!");
+            Console.ResetColor();
+            Console.WriteLine("");
+
+            for (int i = 1; i <= 10; i++)
+            {
+                int numeroAleatorio = random.Next(1, 101);
+
+                int num = 0;
+
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.Write($"Tentativa {i}: ");
+                num = int.Parse(Console.ReadLine());
+                Console.ResetColor();
+
+                if (num == numeroAleatorio)
+                {
+                    vida = vida + dano_win;
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.WriteLine($"Parabéns! Você acertou o numero secreto {numeroAleatorio}!");
+                    Console.WriteLine($"Seus pontos são: {vida}");
+                    Console.WriteLine("Obrigado por jogar!");
+                    break;
+                    Console.ResetColor();
+                }
+                else
+                {
+                    vida = vida - dano_win;
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine($"Errado! Você perdeu {dano_win} pontos. Sua pontuação atual é {vida}");
+                    Console.ResetColor();
+                    dano_win++;
+
+                }
+            }
+
+            Console.ReadKey();
+        }
+    }
+}
