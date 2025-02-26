@@ -1,0 +1,15 @@
+Tag <body> faltando: Esquecemos de fechar a tag <body>. É como se tivéssemos aberto um parêntese e nunca fechado.
+
+Organização das tags: Colocamos a <nav> antes de <main>, e ainda por cima fora do <body>. Imagine que estamos construindo uma casa e esquecemos de colocar o telhado por último.
+
+Erro no link (href): Escrevemos hrf em vez de href. É como escrever "hperlink" em vez de "hyperlink".
+
+Erro na abertura de nova aba: Usamos target="blank" em vez de target="_blank". Precisamos das aspas certas para abrir a nova aba corretamente.
+
+Erros na tabela: Deixamos algumas linhas sem fechar com </tr>. Isso é como construir uma mesa e esquecer de colocar uma perna em cada canto.
+
+Tipo de script (type): Colocamos type="txt/javascript" em vez de type="text/javascript". Isso seria como escrever uma carta e colocar "TEXTO" no envelope em vez de "CARTA".
+
+Erro na função de alerta: Usamos Alert com "A" maiúsculo em vez de alert com "a" minúsculo. É como gritar "ALERTA" quando só precisamos dizer "alerta".
+
+Erro no console log: Escrevemos console.Log com "L" maiúsculo, quando deveria ser console.log
