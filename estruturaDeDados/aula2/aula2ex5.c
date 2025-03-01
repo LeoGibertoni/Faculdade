@@ -6,8 +6,8 @@ int main(){
     printf("Informe um numero: ");
     scanf("%d", &num);
 
-    for(int i = num; i >= 0; i--){
-        printf("%d\n", i); 
+    for(int i = 1; i <= num; i++){
+        printf("%d %c\n", i, i); 
     }
     
     return 0;
