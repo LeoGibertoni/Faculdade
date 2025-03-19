@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de compras</title>
+    <style>
+        *{
+    padding: 0px;
+    margin: 0px;
+    }
+
+    .container{
+        border: 2px solid black;
+        border-radius: 9px;
+        width: 500px;
+        margin: 50px auto;
+        padding: 10px;
+        text-align: center;
+    }
+    .listap{
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    .digitp{
+        font-size: 25px;
+        margin-bottom: 5px;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="digitp">Digite um item para adicionar à lista:</p>
+        <input type="text" id="itemInput">
+        <button id="addButton">Adicionar</button>
+        <p class="listap">Lista:</p>
+        <div class="lista"></div>
+    </div>
+    
+    <script>
+        let lista = [];
+
+        const input = document.getElementById('itemInput');
+        const listaDiv = document.querySelector('.lista');
+        const addButton = document.getElementById('addButton');
+
+        addButton.addEventListener('click', function() {
+            if (input.value.trim() !== '') {
+                lista.push(input.value.trim());
+
+                input.value = '';
+
+                renderizarLista();
+            }
+        });
+
+        function renderizarLista() {
+            listaDiv.innerHTML = '';
+
+            lista.forEach(item => {
+                const itemElement = document.createElement('p');
+                itemElement.textContent = item;
+                listaDiv.appendChild(itemElement);
+            });
+        }
+
+    </script>
+</body>
+</html>

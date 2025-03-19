@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Bandas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="for-method"></div>
+    <div id="while-method"></div>
+    <div id="foreach-method"></div>
+    <div id="for-in"></div>
+    <div id="do-while-method"></div>
+    
+    <script>
+        do{
+            alert('Exemplo de mensagem');
+        }while (confirm('Visualizar novamente?'));
+        
+        let listaBandas = [];
+        listaBandas.push('Charlie Brown Jr');
+        listaBandas.push('acdC');
+        listaBandas.push('System of a Down');
+        listaBandas.push('KISS');
+        listaBandas.push('Likin Park', 'Dream Theater', 'The Police');
+        listaBandas[1] = 'Metallica';
+        listaBandas.pop();
+        listaBandas.splice(3, 1);
+
+        let conteudo = '';
+        for (let i = 0; i < listaBandas.length; i++) {
+            conteudo += listaBandas[i] + '<br>';
+        }
+        document.getElementById('for-method').innerHTML = `<h2>For Loop</h2>${conteudo}`;
+
+        let conteudo1 = '';
+        let posicao = 0;
+        while (posicao < listaBandas.length) {
+            conteudo1 += listaBandas[posicao] + '<br>';
+            posicao++;
+        }
+        document.getElementById('while-method').innerHTML = `<h2>While Loop</h2>${conteudo1}`;
+
+        let conteudo2 = '';
+        listaBandas.forEach(banda => {
+            conteudo2 += banda + '<br>';
+        });
+        document.getElementById('foreach-method').innerHTML = `<h2>ForEach Method</h2>${conteudo2}`;
+
+        let conteudo3 = '';
+        posicao = 0;
+        do {
+            conteudo3 += listaBandas[posicao] + '<br>';
+            posicao++;
+        } while (posicao < listaBandas.length);
+        document.getElementById('do-while-method').innerHTML = `<h2>Do-While Loop</h2>${conteudo3}`;
+
+        let conteudo4 = '';
+        posicao = 0;
+        for (let pos in listaBandas){
+            conteudo4 += listaBandas[pos] + '<br>';
+        }
+        document.getElementById('for-in').innerHTML = `<h2>For in</h2>${conteudo4}`;
+    </script>
+</body>
+</html>
