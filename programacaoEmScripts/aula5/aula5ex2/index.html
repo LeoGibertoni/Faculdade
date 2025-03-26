@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Correção Atividade 4</title>
+    <script type="text/javascript">
+        let repetir = true;
+        let listaCompras = [];
+        while(repetir){
+            let produto = prompt("Informe o produto: ");
+            
+            if (produto && listaCompras.includes(produto)) {
+                alert("Item já cadastrado!");
+            } else if (produto) {
+                listaCompras.push(produto);
+            } else {
+                alert("Nome inválido!");
+            }
+            
+            repetir = confirm("Inserir mais produtos?");
+        }
+        
+        let conteudo = '<ul>';
+        for (let pos in listaCompras){
+            conteudo += '<li>' + listaCompras[pos] + '</li>';
+        }
+        conteudo += '</ul>';
+        document.write(conteudo);
+    </script>
+</head>
+<body>
+</body>
+</html>
