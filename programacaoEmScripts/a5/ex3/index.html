@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Input</title>
+    <script type="text/javascript" defer>
+        function validarNumero(valor) {
+            return !isNaN(valor) && valor !== null && valor !== ""; 
+        }
+    
+        window.onload = function() {
+            document.getElementById("btnCalcular").onclick = function() {    
+                let valor1 = parseFloat(document.getElementById("valor1").value);
+                let valor2 = parseFloat(document.getElementById("valor2").value);
+                
+                if (validarNumero(valor1) && validarNumero(valor2)) {
+                    let media = (valor1 + valor2) / 2;
+                    document.getElementById("resposta").innerText = `A média é: ${media}`;
+                } else {
+                    document.getElementById("resposta").innerText = `Informe números válidos!`;
+                }
+            };
+        };
+    </script>    
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Calcular média</h1>
+    </header>
+    <main>
+        <!--<form method="#" action="#" class="formulary">-->
+            <div>
+                <p>Primary Number: </p>
+                <input type="number" placeholder="valor 1" id="valor1">
+            </div>
+            <div>
+                <p>Secundary Number: </p>
+                <input type="number" placeholder="valor 2" id="valor2">
+            </div>
+            <div>
+                <button id="btnCalcular">Calculate</button>
+            </div>
+            <div>
+                <p id="resposta"></p>
+            </div>
+        <!--</form>-->
+    </main>
+    <footer>
+        <p>Programação de Scripts</p>
+    </footer>
+</body>
+</html>
