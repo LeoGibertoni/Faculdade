@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Correção Atividade 4</title>
+    <script type="text/javascript" defer>
+        const listaCompras = [];
+    
+        function adicionarProduto() {
+            const produto = document.getElementById("produtoInput").value.trim();
+    
+            if (produto && !listaCompras.includes(produto)) {
+                listaCompras.push(produto);
+            } else {
+                alert("Informe um produto válido ou que não esteja na lista!");
+            }
+    
+            atualizarLista();
+            document.getElementById("produtoInput").value = ""; // Limpa o campo
+        }
+    
+        function atualizarLista() {
+            document.getElementById("lista").innerHTML = listaCompras.map(produto => `<li>${produto}</li>`).join('');
+        }
+    </script>
+    
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Lista de Compras</h1>
+    </header>
+    <main>
+        <div>
+            <input type="text" id="produtoInput" placeholder="Digite o nome do produto">
+            <button onclick="adicionarProduto()">Adicionar à Lista</button>
+        </div>
+        <div>
+            <ul id="lista"></ul>
+        </div>
+    </main>
+    <footer>
+        <p>Programação de Scripts</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background-color: rgba(245, 222, 179, 0.432);
+}
+
+.titulo{
+    margin: 10px 0px;
+    text-align: center;
+}
+.paragrafo{
+    margin: 10px 0px;
+    text-align: center;
+}
+.rodape{
+    margin: 10px 0px;
+    text-align: center; 
+}
