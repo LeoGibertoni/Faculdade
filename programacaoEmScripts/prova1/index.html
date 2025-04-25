@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlashCard</title>
+    <link rel="stylesheet" href="flashcardcss.css">
+    <script src="pergunta.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="tags">
+            <p class="topo" style="font-size: 14px;">Avaliação de Programação de script</p>
+        </nav>
+    </header>
+    <main>
+        <p class="flashcard">Flash Cards</p>
+        <div class="containerporcentagem1">
+            <div id="porcento1"></div>
+            <div id="etapa1"></div>
+            <div id="etapa2" style="position: absolute; right: 600px;"></div>
+        </div>
+        <div class="perguntas">
+            <div id="flashcard">
+                <p id="pergunta"></p>
+            </div>
+            <div id="interaction">
+                <button id="voltar">Voltar</button>
+                <button id="btn">Mostrar resposta</button>
+                <button id="avancar">Avançar</button>
+            </div>
+        </div>
+        <div class="respostass">
+            <div class="resp">
+                <div id="contResposta">
+                    <ul id="listaRespostas"></ul>
+                </div>
+                <button onclick="limpar()" class="reset">Limpar Histórico</button>
+            </div>
+        </div>           
+    </main>
+    <footer>
+        <p style="margin: 0px;">Created by Leonardo Gibertoni</p>
+    </footer>
+</body>
+</html>
