@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Vue</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script type="text/javascript" src="vue.min.js"></script>
+</head>
+<body>
+    <header class="container border rounded shadow p-3 mb-4 text-center" style="margin: 10px auto">
+        <h1>Atividade - Vue - React - Angular</h1>
+    </header>
+    <main>
+        <div class="container border rounded shadow p-3 mb-4" id="app">
+            <fieldset>
+                <legend>Selecione uma opção:</legend>
+                <div class="row" style="margin-left: 10px;">
+                    <div class="col-md-4 form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="switchvue" v-model="showVue">
+                        <label class="form-check-label" for="switchvue">Vue</label>
+                    </div>
+                    <div class="col-md-4 form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="switchreact" v-model="showReact">
+                        <label class="form-check-label" for="switchreact">React</label>
+                    </div>
+                    <div class="col-md-4 form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="switchangular" v-model="showAngular">
+                        <label class="form-check-label" for="switchangular">Angular</label>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 container border rounded shadow" style="margin: 15px auto;" v-if="showVue">
+                        <img src="img/vue.png" alt="vueLogo" class="img-thumbnail" style="margin: 10px auto;">
+                        <p>Vue.js é um framework JavaScript progressivo, criado para facilitar o desenvolvimento de interfaces interativas e dinâmicas.
+                            Ele é conhecido por sua simplicidade e flexibilidade, permitindo que desenvolvedores construam desde componentes pequenos
+                            até aplicações complexas de maneira eficiente. Seu funcionamento baseia-se em um sistema de reatividade, tornando a
+                            atualização da interface rápida e intuitiva. Além disso, Vue possui uma comunidade ativa e uma documentação bem elaborada,
+                            tornando a curva de aprendizado mais suave em comparação a outros frameworks. Se você está buscando uma ferramenta ágil e
+                            poderosa para desenvolvimento front-end, Vue é uma excelente escolha! 🚀</p>
+                    </div>
+                    <div class="col-md-4 container border rounded shadow" style="margin: 15px auto;" v-if="showReact">
+                        <img src="img/react.png" alt="react" class="img-thumbnail" style="margin: 10px auto;">
+                        <p>React é uma biblioteca JavaScript amplamente utilizada para a construção de interfaces de usuário interativas e dinâmicas.
+                            Criado pelo Facebook, ele se destaca pelo uso do conceito de componentes, que tornam o desenvolvimento mais modular e
+                            reutilizável. Além disso, React utiliza um sistema chamado Virtual DOM, que otimiza a renderização da interface,
+                            tornando a atualização dos elementos mais rápida e eficiente. Sua comunidade ativa e seu vasto ecossistema de ferramentas,
+                            como Redux e Next.js, fazem dele uma escolha popular para desenvolvedores que desejam construir aplicações escaláveis e
+                            performáticas. Se você busca flexibilidade e eficiência no desenvolvimento front-end, React pode ser uma ótima opção! ⚛️🚀</p>
+                    </div>
+                    <div class="col-md-4 container border rounded shadow" style="margin: 15px auto;" v-if="showAngular">
+                        <img src="img/angular.png" alt="angular" class="img-thumbnail" style="margin: 10px auto;">
+                        <p>Angular é um framework front-end robusto e poderoso desenvolvido pelo Google. Ele permite a criação de aplicações web
+                            escaláveis e eficientes, utilizando uma abordagem baseada em componentes. Diferente de bibliotecas como React,
+                            Angular oferece uma solução completa, incluindo ferramentas para gerenciamento de estado, roteamento e comunicação com APIs.
+                            Ele utiliza TypeScript, uma linguagem que adiciona recursos avançados ao JavaScript, tornando o desenvolvimento mais seguro e
+                            estruturado. Com uma arquitetura baseada no padrão MVC e um ecossistema rico, Angular é uma excelente escolha para projetos
+                            de grande porte que demandam alta performance e manutenção organizada! 🚀🔥</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                showVue: true,  
+                showReact: true, 
+                showAngular: true 
+            }
+        });
+    </script>
+</body>
+</html>

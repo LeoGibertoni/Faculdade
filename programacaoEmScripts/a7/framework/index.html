@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula Frameworks</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <style>
+        body{
+            background-color: rgba(54, 54, 54, 0.462);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>Atividade Frameworks</h1>
+            <form action="#">
+                <fieldset>
+                    <legend>Selecione os estilos:</legend>
+                    <p>input checkbox</p>
+                    <div>
+                        <input type="checkbox" name="rock" class="form-check-input" checked>Rock
+                        <input type="checkbox" name="mpb" class="form-check-input">MPB
+                        <input type="checkbox" name="sertanejo" class="form-check-input">Sertanejo
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Selecione uma opção:</legend>
+                    <p>input radio</p>
+                    <div>
+                        <input type="radio" name="estilo" class="form-check-input" value="samba">Samba
+                        <input type="radio" name="estilo" class="form-check-input" value="pop">Pop
+                        <input type="radio" name="estilo" class="form-check-input" value="pagode">Pagode
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <p>select com options</p>
+                    <legend>Selecione uma opção:</legend>
+                    <select name="estilo2" class="form-select">
+                        <option value="axe">Axé</option>
+                        <option value="blues">Blues</option>
+                    </select>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
