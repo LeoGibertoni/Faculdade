@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>O que é AJAX?</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #f0f4f8;
+      color: #333;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #0066cc;
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      margin-top: 30px;
+      color: #004a99;
+      font-size: 1.5rem;
+    }
+
+    p {
+      margin-bottom: 16px;
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+
+    .code-box {
+      background-color: #f4f4f4;
+      border-left: 5px solid #007BFF;
+      padding: 15px;
+      margin: 20px 0;
+      font-family: monospace;
+      font-size: 0.95rem;
+      overflow-x: auto;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 20px 10px;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      h2 {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>O que é AJAX?</h1>
+    <p><strong>AJAX</strong> (Asynchronous JavaScript and XML) é uma técnica de desenvolvimento web que permite atualizar partes de uma página sem precisar recarregá-la por completo. Isso proporciona uma experiência mais fluida e interativa para o usuário.</p>
+
+    <p>AJAX funciona através de requisições assíncronas ao servidor, utilizando objetos como <code>XMLHttpRequest</code> ou, mais recentemente, a API <code>fetch()</code>.</p>
+
+    <h2>Exemplo com <code>fetch()</code></h2>
+    <div class="code-box">
+      &lt;script&gt;<br>
+      &nbsp;&nbsp;fetch('https://jsonplaceholder.typicode.com/posts/1')<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;.then(response =&gt; response.json())<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;.then(data =&gt; console.log(data))<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;.catch(error =&gt; console.error('Erro:', error));<br>
+      &lt;/script&gt;
+    </div>
+
+    <p>No exemplo acima, usamos <code>fetch()</code> para buscar dados de um servidor de testes e mostramos o resultado no console do navegador. Isso acontece sem que a página precise ser recarregada.</p>
+
+    <p>AJAX é amplamente utilizado em sites modernos, como redes sociais, aplicativos de mensagens, formulários dinâmicos e muito mais.</p>
+  </div>
+</body>
+</html>
