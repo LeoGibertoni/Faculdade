@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Loja com Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Barra superior -->
+<div id="topbar" class="topbar hidden">
+  <div class="topbar-left">
+    <img src="img/logo.png" alt="Logo" class="logo-small">
+  </div>
+  <div class="topbar-center">
+    <input type="text" id="searchInput" placeholder="Buscar produtos..." oninput="filterProducts()" />
+  </div>
+  <div class="topbar-right">
+    <span onclick="openCart()">🛒</span>
+    <span onclick="openProfile()">👤</span>
+  </div>
+</div>
+
+<!-- Catálogo -->
+<div class="container" id="purchase">
+  <h2 id="welcomeMessage" class="hidden">Bem-vindo, <span id="userName">Visitante</span>!</h2>
+  <h3>Catálogo de Produtos</h3>
+  <div id="productCatalog" class="catalog"></div>
+  <hr />
+  <button onclick="openCart()">🛒 Ver Carrinho (<span id="cartCount">0</span>)</button>
+</div>
+
+<!-- Modal de Login -->
+<div id="loginModal" class="modal hidden">
+  <div class="modal-content">
+    <h3>🔐 Faça login para continuar</h3>
+    <input type="email" id="loginEmail" placeholder="Email" class="input-field" />
+    <input type="password" id="loginPassword" placeholder="Senha" class="input-field" />
+    <button onclick="login()">Entrar</button>
+    <button onclick="openRegisterModal()">Cadastrar-se</button>
+    <button onclick="logout()" style="background-color: #e74c3c;">Sair da Conta</button>
+    <button onclick="closeLoginModal()">Fechar</button>
+  </div>
+</div>
+
+<!-- Modal de Cadastro -->
+<div id="registerModal" class="modal hidden">
+  <div class="modal-content">
+    <h3>📝 Cadastro</h3>
+    <input type="text" id="registerName" placeholder="Nome completo" class="input-field" />
+    <input type="email" id="registerEmail" placeholder="Email" class="input-field" />
+    <input type="password" id="registerPassword" placeholder="Senha" class="input-field" />
+    <input type="password" id="registerConfirmPassword" placeholder="Confirmar senha" class="input-field" />
+    <div class="checkbox-container">
+      <input type="checkbox" id="termos" />
+      <label for="termos">Aceito os Termos de Uso</label>
+    </div>
+    <button onclick="register()">Cadastrar</button>
+    <button onclick="closeRegisterModal()">Cancelar</button>
+  </div>
+</div>
+
+<!-- Carrinho -->
+<div id="cartModal" class="modal hidden">
+  <div class="modal-content">
+    <h3>🛒 Carrinho de Compras</h3>
+    <ul id="cartList"></ul>
+    <p><strong>Total:</strong> R$<span id="cartTotal">0</span></p>
+    <button onclick="finalizePurchase()">Finalizar Compra</button>
+    <button onclick="closeCart()">Fechar</button>
+  </div>
+</div>
+
+<!-- Perfil -->
+<div id="profileModal" class="modal hidden">
+  <div class="modal-content">
+    <h3>👤 Meu Perfil</h3>
+    <p><strong>Email:</strong> <span id="profileEmail"></span></p>
+    <button onclick="changePassword()">🔑 Alterar Senha</button>
+    <div class="history-box">
+      <h4>🧾 Histórico de Compras</h4>
+      <div id="profileHistoryList"></div>
+    </div>
+    <button onclick="closeProfile()">Fechar</button>
+    <button onclick="logout()" style="background-color: #e74c3c;">🔓 Sair da Conta</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
