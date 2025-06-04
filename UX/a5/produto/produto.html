@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Detalhes do Produto</title>
+  
+  <!-- AdminLTE CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css" />
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="header-top">
+        <div class="header-logo">
+          <a href="../index.html"><img src="https://adminlte.io/themes/v3/dist/img/AdminLTELogo.png" alt="Logo" /></a>
+        </div>
+        <div class="header-right">
+          <a href="../index.html"><i class="fas fa-home"></i> Loja</a>
+          <a href="../perfil/perfil.html"><i class="fas fa-user"></i> Perfil</a>
+          <a href="#"><i class="fas fa-heart"></i> Curtidos</a>
+        </div>
+      </div>
+      <div class="header-bottom">
+        <a href="#"><i class="fas fa-bars"></i> Departamentos</a>
+        <a href="#"><i class="fas fa-tags"></i> Promoções</a>
+        <a href="#"><i class="fas fa-microchip"></i> Hardwares</a>
+        <a href="#"><i class="fas fa-keyboard"></i> Periféricos</a>
+        <a href="#"><i class="fas fa-headset"></i> Suporte</a>
+      </div>
+  </header>
+
+  <main class="container my-5">
+    <div class="row">
+      <div class="col-md-6">
+        <img id="product-img" src="" alt="" class="img-fluid border rounded" />
+      </div>
+      <div class="col-md-6">
+        <h2 id="product-name"></h2>
+        <p id="product-desc">Descrição do produto ainda não disponível.</p>
+        <h4 class="text-primary" id="product-price"></h4>
+        <button id="add-to-cart-btn" class="btn btn-success mt-3"><i class="fas fa-cart-plus"></i> Adicionar ao carrinho</button>
+      </div>
+    </div>
+  </main>
+
+  <footer style="background:#343a40; color:#ddd; padding:40px 30px; font-family: Arial, sans-serif;">
+    <div style="max-width:1200px; margin:auto; display:flex; flex-wrap: wrap; gap: 40px; justify-content: space-between;">
+  
+      <div style="min-width:180px; flex:1;">
+        <h4 style="color:#fff; margin-bottom:15px;">Institucional</h4>
+        <ul style="list-style:none; padding:0; margin:0; line-height:1.8;">
+          <li><a href="#" style="color:#ddd; text-decoration:none;">Quem somos</a></li>
+          <li><a href="#" style="color:#ddd; text-decoration:none;">Termos e Condições de Venda</a></li>
+          <li><a href="#" style="color:#ddd; text-decoration:none;">Política de Troca e Devoluções</a></li>
+          <li><a href="#" style="color:#ddd; text-decoration:none;">Política de Segurança e Privacidade</a></li>
+          <li><a href="#" style="color:#ddd; text-decoration:none;">Política de Cookies</a></li>
+        </ul>
+      </div>
+  
+      <div style="min-width:180px; flex:1;">
+        <h4 style="color:#fff; margin-bottom:15px;">Dúvidas</h4>
+        <ul style="list-style:none; padding:0; margin:0; line-height:1.8;">
+          <li><a href="#" style="color:#ddd; text-decoration:none;">Como comprar</a></li>
+          <li><a href="#" style="color:#ddd; text-decoration:none;">Prazos e entregas</a></li>
+          <li><a href="#" style="color:#ddd; text-decoration:none;">Formas de Pagamento</a></li>
+          <li><a href="#" style="color:#ddd; text-decoration:none;">Programa de Parceiros</a></li>
+        </ul>
+      </div>
+  
+      <div style="min-width:180px; flex:1;">
+        <h4 style="color:#fff; margin-bottom:15px;">Cliente</h4>
+        <ul style="list-style:none; padding:0; margin:0; line-height:1.8;">
+          <li><a href="#" style="color:#ddd; text-decoration:none;">Minha conta</a></li>
+          <li><a href="#" style="color:#ddd; text-decoration:none;">Meus pedidos</a></li>
+          <li><a href="#" style="color:#ddd; text-decoration:none;">Meus tickets</a></li>
+        </ul>
+      </div>
+  
+      <div style="min-width:180px; flex:1;">
+        <h4 style="color:#fff; margin-bottom:15px;">Ajuda</h4>
+        <ul style="list-style:none; padding:0; margin:0; line-height:1.8;">
+          <li><a href="#" style="color:#ddd; text-decoration:none;">Video Tutoriais</a></li>
+          <li><a href="#" style="color:#ddd; text-decoration:none;">Manuseio do Produto</a></li>
+          <li><a href="#" style="color:#ddd; text-decoration:none;">Fale Conosco</a></li>
+        </ul>
+      </div>
+  
+    </div>
+  </footer>
+
+  <script>
+    // Dados de exemplo para produtos (mesmo do index)
+    const products = [
+      { id: "fonte1", name: "Fonte 1", price: 505, img: "../produtos/fonte.webp", desc: "Fonte de alimentação com 500W de potência." },
+      { id: "fonte2", name: "Fonte 2", price: 550, img: "../produtos/fonte2.webp", desc: "Fonte de alimentação com 600W de potência." },
+      { id: "memoriaram", name: "Memória RAM", price: 505, img: "../produtos/memoriaram.webp", desc: "Memória RAM DDR4 16GB." },
+      { id: "placadevideo", name: "Placa de Vídeo", price: 550, img: "../produtos/placadevideo.webp", desc: "Placa de vídeo de última geração." },
+      { id: "placadevideo2", name: "Placa de Vídeo 2", price: 550, img: "../produtos/placadevideo1.webp", desc: "Modelo avançado para gamers." },
+      { id: "placadevideo3", name: "Placa de Vídeo 3", price: 505, img: "../produtos/placadevideo2.webp", desc: "Placa para edição de vídeo." },
+      { id: "placamae", name: "Placa Mãe", price: 505, img: "../produtos/placamae.webp", desc: "Placa mãe compatível com AMD e Intel." },
+      { id: "processadoramd", name: "Processador AMD", price: 550, img: "../produtos/processadoramd.webp", desc: "Processador AMD Ryzen 5." },
+      { id: "processadorintel", name: "Processador Intel", price: 550, img: "../produtos/processadorintel.jpg", desc: "Processador Intel Core i7." },
+    ];
+
+    // Função para pegar o id do produto pela query string ?id=fonte1
+    function getProductIdFromUrl() {
+      const params = new URLSearchParams(window.location.search);
+      return params.get('id');
+    }
+
+    function loadProduct() {
+      const id = getProductIdFromUrl();
+      const product = products.find(p => p.id === id);
+
+      if (!product) {
+        document.querySelector('main').innerHTML = '<p>Produto não encontrado.</p>';
+        return;
+      }
+
+      document.getElementById('product-img').src = product.img;
+      document.getElementById('product-img').alt = product.name;
+      document.getElementById('product-name').textContent = product.name;
+      document.getElementById('product-price').textContent = `R$ ${product.price.toFixed(2).replace('.', ',')}`;
+      document.getElementById('product-desc').textContent = product.desc;
+
+      // Adicionar evento para botão adicionar ao carrinho
+      document.getElementById('add-to-cart-btn').onclick = () => {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart.push(product);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        alert('Produto adicionado ao carrinho!');
+      };
+    }
+
+    loadProduct();
+  </script>
+</body>
+</html>

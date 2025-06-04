@@ -17,7 +17,9 @@
     <input type="text" id="searchInput" placeholder="Buscar produtos..." oninput="filterProducts()" />
   </div>
   <div class="topbar-right">
-    <span onclick="openCart()">🛒</span>
+    <a href="carrinho/carrinho.html" class="cart-link">
+      🛒 (<span id="cartCount">0</span>)
+    </a>
     <span onclick="openProfile()">👤</span>
   </div>
 </div>
@@ -28,7 +30,9 @@
   <h3>Catálogo de Produtos</h3>
   <div id="productCatalog" class="catalog"></div>
   <hr />
-  <button onclick="openCart()">🛒 Ver Carrinho (<span id="cartCount">0</span>)</button>
+  <a href="carrinho/carrinho.html" class="cart-link">
+    🛒 Ver Carrinho (<span id="cartCount">0</span>)
+  </a>
 </div>
 
 <!-- Modal de Login -->

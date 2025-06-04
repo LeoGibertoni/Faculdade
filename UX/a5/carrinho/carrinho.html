@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Seu Carrinho</title>
+
+  <!-- AdminLTE CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css" />
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    /* Layout para manter o footer no final */
+    body, html {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    main {
+        flex: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-top">
+      <div class="header-logo">
+        <a href="../index.html"><img src="https://adminlte.io/themes/v3/dist/img/AdminLTELogo.png" alt="Logo" /></a>
+      </div>
+      <div class="header-right">
+        <a href="../index.html"><i class="fas fa-home"></i> Loja</a>
+        <a href="../perfil/perfil.html"><i class="fas fa-user"></i> Perfil</a>
+        <a href="#"><i class="fas fa-heart"></i> Curtidos</a>
+      </div>
+    </div>
+    <div class="header-bottom">
+      <a href="#"><i class="fas fa-bars"></i> Departamentos</a>
+      <a href="#"><i class="fas fa-tags"></i> Promoções</a>
+      <a href="#"><i class="fas fa-microchip"></i> Hardwares</a>
+      <a href="#"><i class="fas fa-keyboard"></i> Periféricos</a>
+      <a href="#"><i class="fas fa-headset"></i> Suporte</a>
+    </div>
+  </header>
+
+  <!-- Navegação Breadcrumb -->
+    <nav class="bg-light py-2 px-4 border-bottom">
+        <div class="container">
+        <small class="text-muted">
+            <i class="fas fa-home text-secondary"></i>
+            <a href="../index.html" class="text-decoration-none text-muted">Menu</a>
+            </a> &gt; <span class="text-dark">Carrinho</span>
+        </small>
+        </div>
+    </nav>
+    
+
+  <main class="container my-5 d-flex flex-column flex-lg-row gap-4" style="min-height: 70vh;">
+    <!-- Lista de Produtos -->
+    <div class="col-lg-8">
+      <h2 class="mb-4">Meu Carrinho</h2>
+  
+      <!-- Produto de Exemplo -->
+      <div class="row align-items-center border-bottom pb-3 mb-3">
+        <div class="col-md-2">
+          <img src="../produtos/fonte2.webp" class="img-fluid" alt="Fonte 2">
+        </div>
+        <div class="col-md-6">
+          <h5>Fonte2</h5>
+          <p class="mb-1">Preço unitário: R$ 550,00</p>
+          <p class="mb-0">Quantidade: 1</p>
+        </div>
+        <div class="col-md-4 text-end">
+          <strong>Total: R$ 550,00</strong>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Resumo Fixo -->
+    <div class="price-summary-fixed" style="width: 350px;">
+        <div class="border p-3 rounded bg-light shadow-sm">
+          <h5>Resumo do Pedido</h5>
+          <div class="d-flex justify-content-between">
+            <span>Subtotal:</span>
+            <span>R$ 550,00</span>
+          </div>
+          <div class="d-flex justify-content-between">
+            <span>Frete:</span>
+            <span>R$ 25,00</span>
+          </div>
+          <hr>
+          <div class="d-flex justify-content-between fw-bold">
+            <span>Total:</span>
+            <span>R$ 575,00</span>
+          </div>
+          <button class="btn btn-success w-100 mt-3">Finalizar Compra</button>
+        </div>
+      </div>
+  </main>  
+
+  <footer style="background:#343a40; color:#ddd; padding:40px 30px; font-family: Arial, sans-serif;">
+    <div style="max-width:1200px; margin:auto; display:flex; flex-wrap: wrap; gap: 40px; justify-content: space-between;">
+  
+      <div style="min-width:180px; flex:1;">
+        <h4 style="color:#fff; margin-bottom:15px;">Institucional</h4>
+        <ul style="list-style:none; padding:0; margin:0; line-height:1.8;">
+          <li><a href="#" style="color:#ddd; text-decoration:none;">Quem somos</a></li>
+          <li><a href="#" style="color:#ddd; text-decoration:none;">Termos e Condições de Venda</a></li>
+          <li><a href="#" style="color:#ddd; text-decoration:none;">Política de Troca e Devoluções</a></li>
+          <li><a href="#" style="color:#ddd; text-decoration:none;">Política de Segurança e Privacidade</a></li>
+          <li><a href="#" style="color:#ddd; text-decoration:none;">Política de Cookies</a></li>
+        </ul>
+      </div>
+  
+      <div style="min-width:180px; flex:1;">
+        <h4 style="color:#fff; margin-bottom:15px;">Dúvidas</h4>
+        <ul style="list-style:none; padding:0; margin:0; line-height:1.8;">
+          <li><a href="#" style="color:#ddd; text-decoration:none;">Como comprar</a></li>
+          <li><a href="#" style="color:#ddd; text-decoration:none;">Prazos e entregas</a></li>
+          <li><a href="#" style="color:#ddd; text-decoration:none;">Formas de Pagamento</a></li>
+          <li><a href="#" style="color:#ddd; text-decoration:none;">Programa de Parceiros</a></li>
+        </ul>
+      </div>
+  
+      <div style="min-width:180px; flex:1;">
+        <h4 style="color:#fff; margin-bottom:15px;">Cliente</h4>
+        <ul style="list-style:none; padding:0; margin:0; line-height:1.8;">
+          <li><a href="#" style="color:#ddd; text-decoration:none;">Minha conta</a></li>
+          <li><a href="#" style="color:#ddd; text-decoration:none;">Meus pedidos</a></li>
+          <li><a href="#" style="color:#ddd; text-decoration:none;">Meus tickets</a></li>
+        </ul>
+      </div>
+  
+      <div style="min-width:180px; flex:1;">
+        <h4 style="color:#fff; margin-bottom:15px;">Ajuda</h4>
+        <ul style="list-style:none; padding:0; margin:0; line-height:1.8;">
+          <li><a href="#" style="color:#ddd; text-decoration:none;">Video Tutoriais</a></li>
+          <li><a href="#" style="color:#ddd; text-decoration:none;">Manuseio do Produto</a></li>
+          <li><a href="#" style="color:#ddd; text-decoration:none;">Fale Conosco</a></li>
+        </ul>
+      </div>
+  
+    </div>
+  </footer>
+
+  <script>
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cartItemsDiv = document.getElementById("cart-items");
+    const totalSpan = document.getElementById("total");
+
+    function renderCart() {
+      cartItemsDiv.innerHTML = "";
+      let total = 0;
+
+      if (cart.length === 0) {
+        cartItemsDiv.innerHTML = "<p>Seu carrinho está vazio.</p>";
+        totalSpan.textContent = "0,00";
+        return;
+      }
+
+      cart.forEach(item => {
+        const itemDiv = document.createElement("div");
+        itemDiv.className = "mb-3 p-3 border rounded d-flex justify-content-between align-items-center";
+        itemDiv.innerHTML = `
+          <div>
+            <strong>${item.name}</strong><br/>
+            <span>Preço: R$ ${item.price.toFixed(2).replace('.', ',')}</span>
+          </div>
+          <img src="../${item.img}" alt="${item.name}" style="height: 60px;">
+        `;
+        cartItemsDiv.appendChild(itemDiv);
+        total += item.price;
+      });
+
+      totalSpan.textContent = total.toFixed(2).replace('.', ',');
+    }
+
+    renderCart();
+  </script>
+
+</body>
+</html>

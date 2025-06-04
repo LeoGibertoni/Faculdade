@@ -174,3 +174,55 @@ input {
   max-height: 200px;
   overflow-y: auto;
 }
+
+#cartModal .modal-content {
+  max-width: 600px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+#cartModal h3 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #27ae60;
+}
+
+#cartList {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+#cartList li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+}
+
+#cartTotal {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+#cartModal button {
+  margin-top: 10px;
+  font-size: 16px;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+#cartModal button:first-of-type {
+  background-color: #27ae60;
+}
+
+#cartModal button:last-of-type {
+  background-color: #e74c3c;
+}
