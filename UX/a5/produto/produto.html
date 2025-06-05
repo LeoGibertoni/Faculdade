@@ -33,19 +33,91 @@
       </div>
   </header>
 
+  <nav class="bg-light py-2 px-4 border-bottom">
+    <div class="container">
+    <small class="text-muted">
+        <i class="fas fa-home text-secondary"></i>
+        <a href="../index.html" class="text-decoration-none text-muted">Menu</a>
+        </a> &gt; <span class="text-dark">Produto</span>
+    </small>
+    </div>
+  </nav>
+
   <main class="container my-5">
-    <div class="row">
-      <div class="col-md-6">
-        <img id="product-img" src="" alt="" class="img-fluid border rounded" />
+    <!-- Nome e descrição do produto -->
+    <div class="mb-4">
+      <h1 class="fw-bold">Placa de vídeo RTX 4060</h1>
+      <p class="text-muted fs-5">Placa de vídeo RTX 4060 para alto desempenho.</p>
+    </div>
+
+    <!-- Produto principal -->
+    <div class="row align-items-start mb-5">
+      <!-- Imagem -->
+      <div class="col-md-6 mb-4 mb-md-0">
+        <img src="../produtos/placadevideo.webp" alt="Placa de vídeo RTX 4060" class="img-fluid border rounded w-100" style="max-height: 400px; object-fit: contain;" />
       </div>
+
+      <!-- Detalhes -->
       <div class="col-md-6">
-        <h2 id="product-name"></h2>
-        <p id="product-desc">Descrição do produto ainda não disponível.</p>
-        <h4 class="text-primary" id="product-price"></h4>
-        <button id="add-to-cart-btn" class="btn btn-success mt-3"><i class="fas fa-cart-plus"></i> Adicionar ao carrinho</button>
+        <h4 class="text-primary fw-bold">R$ 550,00</h4>
+        <p class="text-muted">em até <strong>10x sem juros</strong> no cartão</p>
+        <p class="text-success fw-semibold">R$ 495,00 à vista com 10% de desconto</p>
+
+        <!-- Frete -->
+        <div class="mb-3">
+          <label for="cepInput" class="form-label">Calcular frete:</label>
+          <div class="input-group">
+            <input type="text" id="cepInput" class="form-control" placeholder="Digite seu CEP" />
+            <button class="btn btn-outline-secondary" onclick="calcularFrete()">Calcular</button>
+          </div>
+          <small id="freteResultado" class="text-muted"></small>
+        </div>
+
+        <!-- Botão -->
+        <a href="../carrinho/carrinho.html">
+          <button class="btn btn-success mt-3">
+            <i class="fas fa-cart-plus"></i> Adicionar ao carrinho
+          </button>
+        </a>
+      </div>
+    </div>
+
+    <!-- Produtos em destaque -->
+    <div>
+      <h3 class="mb-4">Produtos em destaque</h3>
+      <div class="row g-4">
+        <!-- Produto 1 -->
+        <div class="col-12 col-md-4">
+          <div class="product-card border rounded p-3 text-center h-100">
+            <img src="../produtos/fonte.webp" alt="fonte 650w" class="img-fluid mb-2" />
+            <h5 class="fw-bold">Fonte 650W</h5>
+            <div class="product-price">R$ 505,00</div>
+          </div>
+        </div>
+
+        <!-- Produto 2 -->
+        <div class="col-12 col-md-4">
+          <div class="product-card border rounded p-3 text-center h-100">
+            <img src="../produtos/memoriaram.webp" alt="Memória RAM 2x8GB" class="img-fluid mb-2" />
+            <h5 class="fw-bold">Memória RAM 2x8GB</h5>
+            <div class="product-price">R$ 505,00</div>
+          </div>
+        </div>
+
+        <!-- Produto 3 -->
+        <div class="col-12 col-md-4">
+          <div class="product-card border rounded p-3 text-center h-100">
+            <img src="../produtos/processadorintel.jpg" alt="Processador Intel" class="img-fluid mb-2" />
+            <h5 class="fw-bold">Processador Intel</h5>
+            <div class="product-price">R$ 550,00</div>
+          </div>
+        </div>
       </div>
     </div>
   </main>
+
+
+
 
   <footer style="background:#343a40; color:#ddd; padding:40px 30px; font-family: Arial, sans-serif;">
     <div style="max-width:1200px; margin:auto; display:flex; flex-wrap: wrap; gap: 40px; justify-content: space-between;">
@@ -93,50 +165,21 @@
   </footer>
 
   <script>
-    // Dados de exemplo para produtos (mesmo do index)
-    const products = [
-      { id: "fonte1", name: "Fonte 1", price: 505, img: "../produtos/fonte.webp", desc: "Fonte de alimentação com 500W de potência." },
-      { id: "fonte2", name: "Fonte 2", price: 550, img: "../produtos/fonte2.webp", desc: "Fonte de alimentação com 600W de potência." },
-      { id: "memoriaram", name: "Memória RAM", price: 505, img: "../produtos/memoriaram.webp", desc: "Memória RAM DDR4 16GB." },
-      { id: "placadevideo", name: "Placa de Vídeo", price: 550, img: "../produtos/placadevideo.webp", desc: "Placa de vídeo de última geração." },
-      { id: "placadevideo2", name: "Placa de Vídeo 2", price: 550, img: "../produtos/placadevideo1.webp", desc: "Modelo avançado para gamers." },
-      { id: "placadevideo3", name: "Placa de Vídeo 3", price: 505, img: "../produtos/placadevideo2.webp", desc: "Placa para edição de vídeo." },
-      { id: "placamae", name: "Placa Mãe", price: 505, img: "../produtos/placamae.webp", desc: "Placa mãe compatível com AMD e Intel." },
-      { id: "processadoramd", name: "Processador AMD", price: 550, img: "../produtos/processadoramd.webp", desc: "Processador AMD Ryzen 5." },
-      { id: "processadorintel", name: "Processador Intel", price: 550, img: "../produtos/processadorintel.jpg", desc: "Processador Intel Core i7." },
-    ];
+    function calcularFrete() {
+      const cep = document.getElementById("cepInput").value.trim();
+      const resultado = document.getElementById("freteResultado");
 
-    // Função para pegar o id do produto pela query string ?id=fonte1
-    function getProductIdFromUrl() {
-      const params = new URLSearchParams(window.location.search);
-      return params.get('id');
-    }
-
-    function loadProduct() {
-      const id = getProductIdFromUrl();
-      const product = products.find(p => p.id === id);
-
-      if (!product) {
-        document.querySelector('main').innerHTML = '<p>Produto não encontrado.</p>';
+      if (!cep.match(/^\d{5}-?\d{3}$/)) {
+        resultado.textContent = "Digite um CEP válido.";
+        resultado.style.color = "red";
         return;
       }
 
-      document.getElementById('product-img').src = product.img;
-      document.getElementById('product-img').alt = product.name;
-      document.getElementById('product-name').textContent = product.name;
-      document.getElementById('product-price').textContent = `R$ ${product.price.toFixed(2).replace('.', ',')}`;
-      document.getElementById('product-desc').textContent = product.desc;
-
-      // Adicionar evento para botão adicionar ao carrinho
-      document.getElementById('add-to-cart-btn').onclick = () => {
-        let cart = JSON.parse(localStorage.getItem('cart')) || [];
-        cart.push(product);
-        localStorage.setItem('cart', JSON.stringify(cart));
-        alert('Produto adicionado ao carrinho!');
-      };
+      const valorFrete = (Math.random() * 20 + 10).toFixed(2).replace('.', ',');
+      resultado.textContent = `Frete estimado: R$ ${valorFrete}`;
+      resultado.style.color = "green";
     }
-
-    loadProduct();
   </script>
+
 </body>
 </html>
