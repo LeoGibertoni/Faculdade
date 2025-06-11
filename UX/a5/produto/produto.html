@@ -10,6 +10,8 @@
   <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="../style.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
 
@@ -19,11 +21,12 @@
           <a href="../index.html"><img src="https://adminlte.io/themes/v3/dist/img/AdminLTELogo.png" alt="Logo" /></a>
         </div>
         <div class="header-right">
-          <a href="../index.html"><i class="fas fa-home"></i> Loja</a>
+          <a href="../login/login.html"><i class="fas fa-right-to-bracket"></i>Entre</a>
           <a href="../perfil/perfil.html"><i class="fas fa-user"></i> Perfil</a>
           <a href="#"><i class="fas fa-heart"></i> Curtidos</a>
+          <a href="../carrinho/carrinho.html"><i class="fas fa-shopping-cart"></i> Carrinho</a>
         </div>
-      </div>
+      </div>  
       <div class="header-bottom">
         <a href="#"><i class="fas fa-bars"></i> Departamentos</a>
         <a href="#"><i class="fas fa-tags"></i> Promoções</a>
@@ -72,14 +75,8 @@
           </div>
           <small id="freteResultado" class="text-muted"></small>
         </div>
-
-        <!-- Botão -->
-        <a href="../carrinho/carrinho.html">
-          <button class="btn btn-success mt-3">
-            <i class="fas fa-cart-plus"></i> Adicionar ao carrinho
-          </button>
-        </a>
-      </div>
+          <button class="btn btn-primary" onclick="adicionarAoCarrinho()">Adicionar ao carrinho</button>
+        </div>
     </div>
 
     <!-- Produtos em destaque -->
@@ -114,6 +111,22 @@
         </div>
       </div>
     </div>
+
+    <div id="adicionadoCarrinho" class="modal fade" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-center">
+          <div class="modal-header">
+            <h5 class="modal-title w-100">Adicionado no carrinho com sucesso!</h5>
+          </div>
+          <div class="modal-body">
+            <p>Você pode continuar comprando ou finalizar seu pedido.</p>
+          </div>
+          <div class="modal-footer justify-content-center">
+            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>    
   </main>
 
 
@@ -146,9 +159,9 @@
       <div style="min-width:180px; flex:1;">
         <h4 style="color:#fff; margin-bottom:15px;">Cliente</h4>
         <ul style="list-style:none; padding:0; margin:0; line-height:1.8;">
-          <li><a href="#" style="color:#ddd; text-decoration:none;">Minha conta</a></li>
-          <li><a href="#" style="color:#ddd; text-decoration:none;">Meus pedidos</a></li>
-          <li><a href="#" style="color:#ddd; text-decoration:none;">Meus tickets</a></li>
+          <li><a href="../perfil/perfil.html" style="color:#ddd; text-decoration:none;">Minha conta</a></li>
+          <li><a href="../perfil/perfil.html" style="color:#ddd; text-decoration:none;">Meus pedidos</a></li>
+          <li><a href="../perfil/perfil.html" style="color:#ddd; text-decoration:none;">Meus tickets</a></li>
         </ul>
       </div>
   
@@ -168,16 +181,26 @@
     function calcularFrete() {
       const cep = document.getElementById("cepInput").value.trim();
       const resultado = document.getElementById("freteResultado");
-
+  
       if (!cep.match(/^\d{5}-?\d{3}$/)) {
         resultado.textContent = "Digite um CEP válido.";
         resultado.style.color = "red";
         return;
       }
-
+  
       const valorFrete = (Math.random() * 20 + 10).toFixed(2).replace('.', ',');
       resultado.textContent = `Frete estimado: R$ ${valorFrete}`;
       resultado.style.color = "green";
+    }
+  
+    function mostrarModal() {
+      const modalElement = document.getElementById('adicionadoCarrinho');
+      const modal = new bootstrap.Modal(modalElement);
+      modal.show();
+    }
+  
+    function adicionarAoCarrinho() {
+      mostrarModal();
     }
   </script>
 

@@ -24,6 +24,12 @@
         flex: 1;
     }
   </style>
+  
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Bootstrap Bundle (com Popper.js incluído) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </head>
 <body>
 
@@ -33,7 +39,8 @@
         <a href="../index.html"><img src="https://adminlte.io/themes/v3/dist/img/AdminLTELogo.png" alt="Logo" /></a>
       </div>
       <div class="header-right">
-        <a href="../index.html"><i class="fas fa-home"></i> Loja</a>
+        <a href="../login/login.html"><i class="fas fa-right-to-bracket"></i>Entre</a>
+        <a href="../index.html"><i class="fas fa-home"></i>Loja</a>
         <a href="../perfil/perfil.html"><i class="fas fa-user"></i> Perfil</a>
         <a href="#"><i class="fas fa-heart"></i> Curtidos</a>
       </div>
@@ -134,9 +141,25 @@
           <span>Total final:</span>
           <span>R$ 1.469,50</span>
         </div>
-        <button class="btn btn-success w-100 mt-3">Finalizar Compra</button>
+        <button class="btn btn-success w-100 mt-3" onclick="mostrarModal()">Finalizar Compra</button>
       </div>
     </div>
+
+    <div id="pedidoConcluidoModal" class="modal fade" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-center">
+          <div class="modal-header">
+            <h5 class="modal-title w-100">Pedido Concluído</h5>
+          </div>
+          <div class="modal-body">
+            <p>Obrigado pela sua compra!</p>
+          </div>
+          <div class="modal-footer justify-content-center">
+            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>    
   </main>
 
   <footer style="background:#343a40; color:#ddd; padding:40px 30px; font-family: Arial, sans-serif;">
@@ -166,7 +189,7 @@
       <div style="min-width:180px; flex:1;">
         <h4 style="color:#fff; margin-bottom:15px;">Cliente</h4>
         <ul style="list-style:none; padding:0; margin:0; line-height:1.8;">
-          <li><a href="#" style="color:#ddd; text-decoration:none;">Minha conta</a></li>
+          <li><a href="../perfil/perfil.html" style="color:#ddd; text-decoration:none;">Minha conta</a></li>
           <li><a href="#" style="color:#ddd; text-decoration:none;">Meus pedidos</a></li>
           <li><a href="#" style="color:#ddd; text-decoration:none;">Meus tickets</a></li>
         </ul>
@@ -188,17 +211,21 @@
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
     const cartItemsDiv = document.getElementById("cart-items");
     const totalSpan = document.getElementById("total");
-
+  
+    function mostrarModal() {
+      $('#pedidoConcluidoModal').modal('show');
+    }
+  
     function renderCart() {
       cartItemsDiv.innerHTML = "";
       let total = 0;
-
+  
       if (cart.length === 0) {
         cartItemsDiv.innerHTML = "<p>Seu carrinho está vazio.</p>";
         totalSpan.textContent = "0,00";
         return;
       }
-
+  
       cart.forEach(item => {
         const itemDiv = document.createElement("div");
         itemDiv.className = "mb-3 p-3 border rounded d-flex justify-content-between align-items-center";
@@ -212,12 +239,11 @@
         cartItemsDiv.appendChild(itemDiv);
         total += item.price;
       });
-
+  
       totalSpan.textContent = total.toFixed(2).replace('.', ',');
     }
-
+  
     renderCart();
-  </script>
-
+  </script>  
 </body>
 </html>
