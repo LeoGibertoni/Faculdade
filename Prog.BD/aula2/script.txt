@@ -1,0 +1,45 @@
+-- Criar a tabela de alunos
+
+CREATE TABLE Aluno (
+
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+
+    Nome NVARCHAR(100) NOT NULL,
+
+    Email NVARCHAR(150),
+
+    Curso NVARCHAR(100)
+
+);
+ 
+-- Inserir um aluno
+
+INSERT INTO Aluno (Nome, Email, Curso)
+
+VALUES ('Maria Silva', 'maria.silva@exemplo.com', 'Sistemas de Informação');
+ 
+-- Consultar alunos cadastrados
+
+SELECT * FROM Aluno;
+ 
+-- Alterar o curso do aluno
+
+UPDATE Aluno
+
+SET Curso = 'Ciência da Computação'
+
+WHERE Id = 1;
+ 
+-- Consultar novamente para ver a alteração
+
+SELECT * FROM Aluno;
+ 
+-- Deletar o aluno
+
+DELETE FROM Aluno
+
+WHERE Id = 1;
+ 
+-- Conferir tabela
+
+SELECT * FROM Aluno;
