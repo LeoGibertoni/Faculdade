@@ -1,0 +1,20 @@
+CREATE DATABASE FACULDADE;
+
+USE FACULDADE;
+
+CREATE TABLE ALUNOS(
+	CODIGO INT PRIMARY KEY AUTO_INCREMENT,
+    NOME VARCHAR(100) NOT NULL,
+    IDADE INT NOT NULL
+);
+
+SELECT * FROM FACULDADE
+
+USE FACULDADE;
+
+insert into (nome, idade) VALUES ("DANILO", 40);
+insert into (nome, idade) VALUES ("JEF", 34);
+insert into (nome, idade) VALUES ("RONALDINHO", 502);
+insert into (nome, idade) VALUES ("MATHEUS", 15);
+
+select * from alunos

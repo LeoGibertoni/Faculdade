@@ -1,0 +1,6 @@
+THUNDER CLIENT
+
+{
+  "nome": "nome1",
+  "idade": 242
+}
