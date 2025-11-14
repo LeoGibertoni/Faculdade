@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Consulta de Alunos</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            width: 600px;
+            margin: auto;
+            margin-top: 40px;
+        }
+        input {
+            padding: 8px;
+            margin: 5px;
+        }
+        button {
+            padding: 8px 12px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        table tr, table td, table th {
+            border: 1px solid #ccc;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Cadastro e Consulta de Alunos</h1>
+
+    <!-- Formulário -->
+    <h2>Cadastrar aluno</h2>
+    <input type="text" id="nome" placeholder="Nome">
+    <input type="number" id="idade" placeholder="Idade">
+    <button onclick="cadastrarAluno()">Cadastrar</button>
+
+    <!-- Botão de consulta -->
+    <h2>Lista de Alunos</h2>
+    <button onclick="carregarAlunos()">Carregar alunos</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NOME</th>
+                <th>IDADE</th>
+            </tr>
+        </thead>
+        <tbody id="tabela">
+
+        </tbody>
+    </table>
+
+    <script>
+        const API = "http://localhost:7000";
+
+        function carregarAlunos() {
+            fetch(`${API}/alunos`)
+                .then(res => res.json())
+                .then(dados => {
+                    let tabela = document.getElementById("tabela");
+                    tabela.innerHTML = ""; 
+
+                    dados.forEach(aluno => {
+                        tabela.innerHTML += `
+                            <tr>
+                                <td>${aluno.CODIGO}</td>
+                                <td>${aluno.NOME}</td>
+                                <td>${aluno.IDADE}</td>
+                            </tr>
+                        `;
+                    });
+                });
+        }
+
+        function cadastrarAluno() {
+            const nome = document.getElementById("nome").value;
+            const idade = document.getElementById("idade").value;
+
+            fetch(`${API}/alunos`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ nome, idade })
+            })
+                .then(res => res.text())
+                .then(msg => {
+                    alert(msg);
+                    carregarAlunos(); 
+                });
+        }
+    </script>
+
+</body>
+</html>
