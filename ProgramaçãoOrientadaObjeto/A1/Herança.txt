@@ -1,0 +1,4 @@
+Herança
+	Definição:
+		Classe pode herdar características ( atributos e métodos ) de outra classe chamada de classe base ou superclasse.
+

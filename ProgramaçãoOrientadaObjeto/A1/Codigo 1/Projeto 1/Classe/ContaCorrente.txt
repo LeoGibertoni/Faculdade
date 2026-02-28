@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Primeiro_Codigo
+{
+    public class ContaCorrente : Conta
+    {
+        private decimal limite;
+        public decimal SaldoContaCorrente;
+
+        public void setLimite(decimal _limite)
+        {
+            if (_limite <= 0 || _limite > 300)
+                Console.WriteLine("Limite não permitido!");
+            else
+                limite = _limite;
+        }
+
+        public decimal getLimite()
+        {
+            return limite;
+        }
+    }
+}

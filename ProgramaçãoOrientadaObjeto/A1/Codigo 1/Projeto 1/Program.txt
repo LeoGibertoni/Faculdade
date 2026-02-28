@@ -1,0 +1,17 @@
+using Primeiro_Codigo;
+
+//Criar objeto conta corrente
+
+ContaCorrente conta1 = new ContaCorrente();
+conta1.titular = "Leo";
+conta1.numeroConta = 102;
+conta1.setLimite(200);
+Console.WriteLine($"Limite:{conta1.getLimite()}");
+conta1.SaldoContaCorrente = 200;
+
+ContaPoupanca conta2 = new ContaPoupanca();
+conta2.titular = "Leo";
+conta2.numeroConta = 102;
+conta2.saldoContaPoupanca = 1050;
+
+Console.ReadLine();
