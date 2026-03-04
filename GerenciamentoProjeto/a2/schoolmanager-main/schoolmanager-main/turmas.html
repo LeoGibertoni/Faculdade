@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>SchoolManager - Turmas</title>
+  <link rel="stylesheet" href="styles.css?v=16.1"/>
+</head>
+<body>
+  <div id="hdr"></div>
+  <div class="container">
+    <div class="grid cols-2">
+      <div class="card">
+        <h3 style="margin:0 0 10px">Cadastrar Turma</h3>
+        <form id="turmaForm" class="grid cols-2">
+          <div><label>Nome</label><input name="nome" required/></div>
+          <div><label>Ano</label><input name="ano" type="number" required/></div>
+          <div><label>Turno</label><select name="turno"><option>Manhã</option><option>Tarde</option><option>Noite</option></select></div>
+          <button class="btn" type="submit">Salvar</button>
+        </form>
+      </div>
+      <div class="card">
+        <h3 style="margin:0 0 10px">Turmas</h3>
+        <table class="table" id="turmaTable"></table>
+      </div>
+    </div>
+  </div>
+  <script src="app.js?v=16.1"></script>
+  <script>
+    App.guard(['admin']); App.mountHeader();
+    const table = document.getElementById('turmaTable');
+    const form = document.getElementById('turmaForm');
+    function draw(){
+      const rows = App.turmas.list().map(t=>`
+        <tr><td>${t.nome}</td><td>${t.ano}</td><td>${t.turno}</td>
+        <td style="text-align:right"><button data-id="${t.id}" class="btn ghost del">Excluir</button></td></tr>`).join('');
+      table.innerHTML = `<tr><th>Nome</th><th>Ano</th><th>Turno</th><th></th></tr>${rows}`;
+      document.querySelectorAll('.del').forEach(b=>b.onclick=()=>{ App.turmas.remove(b.dataset.id); App.toast('Turma removida','ok'); draw(); });
+    }
+    form.onsubmit=(e)=>{ e.preventDefault(); const d=new FormData(form); App.turmas.create(Object.fromEntries(d.entries())); form.reset(); App.toast('Turma criada','ok'); draw(); };
+    draw();
+    window.addEventListener('pageshow', function (e) { if (e.persisted) location.reload(); });
+  </script>
+</body>
+</html>
