@@ -1,5 +1,2 @@
-﻿using exercicio2;
-
-INotificacao Leonardo = new NotificacaoEmail();
-Leonardo.EnviarMensagem("Teste");
-
+﻿// See https://aka.ms/new-console-template for more information
+Console.WriteLine("Hello, World!");

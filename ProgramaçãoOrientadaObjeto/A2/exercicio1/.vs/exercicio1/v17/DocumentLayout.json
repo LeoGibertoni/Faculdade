@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\0220482422001\\Documents\\GitHub\\Faculdade\\Programa\u00E7\u00E3oOrientadaObjeto\\A2\\exercicio1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{486EEDFB-12F9-4732-B953-2AEC19A75006}|exercicio1\\exercicio1.csproj|c:\\users\\0220482422001\\documents\\github\\faculdade\\programa\u00E7\u00E3oorientadaobjeto\\a2\\exercicio1\\exercicio1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{486EEDFB-12F9-4732-B953-2AEC19A75006}|exercicio1\\exercicio1.csproj|solutionrelative:exercicio1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{486EEDFB-12F9-4732-B953-2AEC19A75006}|exercicio1\\exercicio1.csproj|c:\\users\\0220482422001\\documents\\github\\faculdade\\programa\u00E7\u00E3oorientadaobjeto\\a2\\exercicio1\\exercicio1\\calculadora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{486EEDFB-12F9-4732-B953-2AEC19A75006}|exercicio1\\exercicio1.csproj|solutionrelative:exercicio1\\calculadora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{486EEDFB-12F9-4732-B953-2AEC19A75006}|exercicio1\\exercicio1.csproj|c:\\users\\0220482422001\\documents\\github\\faculdade\\programa\u00E7\u00E3oorientadaobjeto\\a2\\exercicio1\\exercicio1\\carro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{486EEDFB-12F9-4732-B953-2AEC19A75006}|exercicio1\\exercicio1.csproj|solutionrelative:exercicio1\\carro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{486EEDFB-12F9-4732-B953-2AEC19A75006}|exercicio1\\exercicio1.csproj|c:\\users\\0220482422001\\documents\\github\\faculdade\\programa\u00E7\u00E3oorientadaobjeto\\a2\\exercicio1\\exercicio1\\veiculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{486EEDFB-12F9-4732-B953-2AEC19A75006}|exercicio1\\exercicio1.csproj|solutionrelative:exercicio1\\veiculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{486EEDFB-12F9-4732-B953-2AEC19A75006}|exercicio1\\exercicio1.csproj|c:\\users\\0220482422001\\documents\\github\\faculdade\\programa\u00E7\u00E3oorientadaobjeto\\a2\\exercicio1\\exercicio1\\barco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{486EEDFB-12F9-4732-B953-2AEC19A75006}|exercicio1\\exercicio1.csproj|solutionrelative:exercicio1\\barco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Calculadora.cs",
+              "DocumentMoniker": "C:\\Users\\0220482422001\\Documents\\GitHub\\Faculdade\\Programa\u00E7\u00E3oOrientadaObjeto\\A2\\exercicio1\\exercicio1\\Calculadora.cs",
+              "RelativeDocumentMoniker": "exercicio1\\Calculadora.cs",
+              "ToolTip": "C:\\Users\\0220482422001\\Documents\\GitHub\\Faculdade\\Programa\u00E7\u00E3oOrientadaObjeto\\A2\\exercicio1\\exercicio1\\Calculadora.cs",
+              "RelativeToolTip": "exercicio1\\Calculadora.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-20T23:27:12.194Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Barco.cs",
+              "DocumentMoniker": "C:\\Users\\0220482422001\\Documents\\GitHub\\Faculdade\\Programa\u00E7\u00E3oOrientadaObjeto\\A2\\exercicio1\\exercicio1\\Barco.cs",
+              "RelativeDocumentMoniker": "exercicio1\\Barco.cs",
+              "ToolTip": "C:\\Users\\0220482422001\\Documents\\GitHub\\Faculdade\\Programa\u00E7\u00E3oOrientadaObjeto\\A2\\exercicio1\\exercicio1\\Barco.cs",
+              "RelativeToolTip": "exercicio1\\Barco.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-20T22:51:31.531Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Carro.cs",
+              "DocumentMoniker": "C:\\Users\\0220482422001\\Documents\\GitHub\\Faculdade\\Programa\u00E7\u00E3oOrientadaObjeto\\A2\\exercicio1\\exercicio1\\Carro.cs",
+              "RelativeDocumentMoniker": "exercicio1\\Carro.cs",
+              "ToolTip": "C:\\Users\\0220482422001\\Documents\\GitHub\\Faculdade\\Programa\u00E7\u00E3oOrientadaObjeto\\A2\\exercicio1\\exercicio1\\Carro.cs",
+              "RelativeToolTip": "exercicio1\\Carro.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-20T22:48:44.768Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Veiculo.cs",
+              "DocumentMoniker": "C:\\Users\\0220482422001\\Documents\\GitHub\\Faculdade\\Programa\u00E7\u00E3oOrientadaObjeto\\A2\\exercicio1\\exercicio1\\Veiculo.cs",
+              "RelativeDocumentMoniker": "exercicio1\\Veiculo.cs",
+              "ToolTip": "C:\\Users\\0220482422001\\Documents\\GitHub\\Faculdade\\Programa\u00E7\u00E3oOrientadaObjeto\\A2\\exercicio1\\exercicio1\\Veiculo.cs",
+              "RelativeToolTip": "exercicio1\\Veiculo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-20T22:44:32.215Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\0220482422001\\Documents\\GitHub\\Faculdade\\Programa\u00E7\u00E3oOrientadaObjeto\\A2\\exercicio1\\exercicio1\\Program.cs",
+              "RelativeDocumentMoniker": "exercicio1\\Program.cs",
+              "ToolTip": "C:\\Users\\0220482422001\\Documents\\GitHub\\Faculdade\\Programa\u00E7\u00E3oOrientadaObjeto\\A2\\exercicio1\\exercicio1\\Program.cs",
+              "RelativeToolTip": "exercicio1\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-20T22:41:09.08Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

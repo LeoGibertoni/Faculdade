@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\0220482422001\\Documents\\GitHub\\Faculdade\\Programa\u00E7\u00E3oOrientadaObjeto\\A3\\exercicio2\\Exercicio2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AA315C2A-C7A5-4BDB-A6A5-352ADB241FC4}|Exercicio2\\Exercicio2.csproj|c:\\users\\0220482422001\\documents\\github\\faculdade\\programa\u00E7\u00E3oorientadaobjeto\\a3\\exercicio2\\exercicio2\\exercicio2\\pagamentoboleto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA315C2A-C7A5-4BDB-A6A5-352ADB241FC4}|Exercicio2\\Exercicio2.csproj|solutionrelative:exercicio2\\pagamentoboleto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AA315C2A-C7A5-4BDB-A6A5-352ADB241FC4}|Exercicio2\\Exercicio2.csproj|c:\\users\\0220482422001\\documents\\github\\faculdade\\programa\u00E7\u00E3oorientadaobjeto\\a3\\exercicio2\\exercicio2\\exercicio2\\pagamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA315C2A-C7A5-4BDB-A6A5-352ADB241FC4}|Exercicio2\\Exercicio2.csproj|solutionrelative:exercicio2\\pagamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AA315C2A-C7A5-4BDB-A6A5-352ADB241FC4}|Exercicio2\\Exercicio2.csproj|c:\\users\\0220482422001\\documents\\github\\faculdade\\programa\u00E7\u00E3oorientadaobjeto\\a3\\exercicio2\\exercicio2\\exercicio2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA315C2A-C7A5-4BDB-A6A5-352ADB241FC4}|Exercicio2\\Exercicio2.csproj|solutionrelative:exercicio2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AA315C2A-C7A5-4BDB-A6A5-352ADB241FC4}|Exercicio2\\Exercicio2.csproj|c:\\users\\0220482422001\\documents\\github\\faculdade\\programa\u00E7\u00E3oorientadaobjeto\\a3\\exercicio2\\exercicio2\\exercicio2\\pagamentocash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA315C2A-C7A5-4BDB-A6A5-352ADB241FC4}|Exercicio2\\Exercicio2.csproj|solutionrelative:exercicio2\\pagamentocash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PagamentoCash.cs",
+              "DocumentMoniker": "C:\\Users\\0220482422001\\Documents\\GitHub\\Faculdade\\Programa\u00E7\u00E3oOrientadaObjeto\\A3\\exercicio2\\Exercicio2\\Exercicio2\\PagamentoCash.cs",
+              "RelativeDocumentMoniker": "Exercicio2\\PagamentoCash.cs",
+              "ToolTip": "C:\\Users\\0220482422001\\Documents\\GitHub\\Faculdade\\Programa\u00E7\u00E3oOrientadaObjeto\\A3\\exercicio2\\Exercicio2\\Exercicio2\\PagamentoCash.cs",
+              "RelativeToolTip": "Exercicio2\\PagamentoCash.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-21T00:10:13.974Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PagamentoBoleto.cs",
+              "DocumentMoniker": "C:\\Users\\0220482422001\\Documents\\GitHub\\Faculdade\\Programa\u00E7\u00E3oOrientadaObjeto\\A3\\exercicio2\\Exercicio2\\Exercicio2\\PagamentoBoleto.cs",
+              "RelativeDocumentMoniker": "Exercicio2\\PagamentoBoleto.cs",
+              "ToolTip": "C:\\Users\\0220482422001\\Documents\\GitHub\\Faculdade\\Programa\u00E7\u00E3oOrientadaObjeto\\A3\\exercicio2\\Exercicio2\\Exercicio2\\PagamentoBoleto.cs",
+              "RelativeToolTip": "Exercicio2\\PagamentoBoleto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-21T00:09:54.622Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Pagamento.cs",
+              "DocumentMoniker": "C:\\Users\\0220482422001\\Documents\\GitHub\\Faculdade\\Programa\u00E7\u00E3oOrientadaObjeto\\A3\\exercicio2\\Exercicio2\\Exercicio2\\Pagamento.cs",
+              "RelativeDocumentMoniker": "Exercicio2\\Pagamento.cs",
+              "ToolTip": "C:\\Users\\0220482422001\\Documents\\GitHub\\Faculdade\\Programa\u00E7\u00E3oOrientadaObjeto\\A3\\exercicio2\\Exercicio2\\Exercicio2\\Pagamento.cs",
+              "RelativeToolTip": "Exercicio2\\Pagamento.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-21T00:05:37.39Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\0220482422001\\Documents\\GitHub\\Faculdade\\Programa\u00E7\u00E3oOrientadaObjeto\\A3\\exercicio2\\Exercicio2\\Exercicio2\\Program.cs",
+              "RelativeDocumentMoniker": "Exercicio2\\Program.cs",
+              "ToolTip": "C:\\Users\\0220482422001\\Documents\\GitHub\\Faculdade\\Programa\u00E7\u00E3oOrientadaObjeto\\A3\\exercicio2\\Exercicio2\\Exercicio2\\Program.cs",
+              "RelativeToolTip": "Exercicio2\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-21T00:05:19.151Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
