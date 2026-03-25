@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\0220482422001\\Documents\\GitHub\\Faculdade\\Programa\u00E7\u00E3oOrientadaObjeto\\A2\\exercicio2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A8F4E1A9-E400-4F9C-BE01-52F141C94D9A}|exercicio2\\exercicio2.csproj|c:\\users\\0220482422001\\documents\\github\\faculdade\\programa\u00E7\u00E3oorientadaobjeto\\a2\\exercicio2\\exercicio2\\notificacaoemail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8F4E1A9-E400-4F9C-BE01-52F141C94D9A}|exercicio2\\exercicio2.csproj|solutionrelative:exercicio2\\notificacaoemail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8F4E1A9-E400-4F9C-BE01-52F141C94D9A}|exercicio2\\exercicio2.csproj|c:\\users\\0220482422001\\documents\\github\\faculdade\\programa\u00E7\u00E3oorientadaobjeto\\a2\\exercicio2\\exercicio2\\inotificacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8F4E1A9-E400-4F9C-BE01-52F141C94D9A}|exercicio2\\exercicio2.csproj|solutionrelative:exercicio2\\inotificacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8F4E1A9-E400-4F9C-BE01-52F141C94D9A}|exercicio2\\exercicio2.csproj|c:\\users\\0220482422001\\documents\\github\\faculdade\\programa\u00E7\u00E3oorientadaobjeto\\a2\\exercicio2\\exercicio2\\enviar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8F4E1A9-E400-4F9C-BE01-52F141C94D9A}|exercicio2\\exercicio2.csproj|solutionrelative:exercicio2\\enviar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8F4E1A9-E400-4F9C-BE01-52F141C94D9A}|exercicio2\\exercicio2.csproj|c:\\users\\0220482422001\\documents\\github\\faculdade\\programa\u00E7\u00E3oorientadaobjeto\\a2\\exercicio2\\exercicio2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8F4E1A9-E400-4F9C-BE01-52F141C94D9A}|exercicio2\\exercicio2.csproj|solutionrelative:exercicio2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NotificacaoEmail.cs",
+              "DocumentMoniker": "C:\\Users\\0220482422001\\Documents\\GitHub\\Faculdade\\Programa\u00E7\u00E3oOrientadaObjeto\\A2\\exercicio2\\exercicio2\\NotificacaoEmail.cs",
+              "RelativeDocumentMoniker": "exercicio2\\NotificacaoEmail.cs",
+              "ToolTip": "C:\\Users\\0220482422001\\Documents\\GitHub\\Faculdade\\Programa\u00E7\u00E3oOrientadaObjeto\\A2\\exercicio2\\exercicio2\\NotificacaoEmail.cs",
+              "RelativeToolTip": "exercicio2\\NotificacaoEmail.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-21T00:03:09.589Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "INotificacao.cs",
+              "DocumentMoniker": "C:\\Users\\0220482422001\\Documents\\GitHub\\Faculdade\\Programa\u00E7\u00E3oOrientadaObjeto\\A2\\exercicio2\\exercicio2\\INotificacao.cs",
+              "RelativeDocumentMoniker": "exercicio2\\INotificacao.cs",
+              "ToolTip": "C:\\Users\\0220482422001\\Documents\\GitHub\\Faculdade\\Programa\u00E7\u00E3oOrientadaObjeto\\A2\\exercicio2\\exercicio2\\INotificacao.cs",
+              "RelativeToolTip": "exercicio2\\INotificacao.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-21T00:03:07.772Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Enviar.cs",
+              "DocumentMoniker": "C:\\Users\\0220482422001\\Documents\\GitHub\\Faculdade\\Programa\u00E7\u00E3oOrientadaObjeto\\A2\\exercicio2\\exercicio2\\Enviar.cs",
+              "RelativeDocumentMoniker": "exercicio2\\Enviar.cs",
+              "ToolTip": "C:\\Users\\0220482422001\\Documents\\GitHub\\Faculdade\\Programa\u00E7\u00E3oOrientadaObjeto\\A2\\exercicio2\\exercicio2\\Enviar.cs",
+              "RelativeToolTip": "exercicio2\\Enviar.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-21T00:03:07.008Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\0220482422001\\Documents\\GitHub\\Faculdade\\Programa\u00E7\u00E3oOrientadaObjeto\\A2\\exercicio2\\exercicio2\\Program.cs",
+              "RelativeDocumentMoniker": "exercicio2\\Program.cs",
+              "ToolTip": "C:\\Users\\0220482422001\\Documents\\GitHub\\Faculdade\\Programa\u00E7\u00E3oOrientadaObjeto\\A2\\exercicio2\\exercicio2\\Program.cs",
+              "RelativeToolTip": "exercicio2\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-21T00:02:16.939Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
