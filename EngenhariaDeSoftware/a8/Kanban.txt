@@ -1,0 +1,30 @@
+-> Metodologia visual de gerenciamento de fluxo de trabalho
+-> Otimizar a produtividade, eficiência e previsibilidade das equipes
+-> Desenvolvido pela Toyota no japão p/ gerenciar produção na fábrica
+-> Adaptado p/ diversas áreas, inclusive no desenvolvimento de software
+-> proporciona um fluxo contínuo de trabalho e evita sobrecarga de trabalho
+
+-> Princípios
+	-> Visualização do fluxo de trabalho
+	-> Limitador de trabalho por etapa ( wip )
+	-> Deixar políticas de fluxo explícitas
+	-> Promover melhorias contínua
+
+-> Componentes visuais do kanban
+	-> Quadro: Representa o processo
+	-> Colunas: Representa as etapas ou fases
+	-> Cartões: Representa os itens de trabalho
+		-> Cards da empresa
+	-> Em cada Cartão tem o que precisa ser feito e responsável de realizar o trabalho
+
+-> Kanban
+	Trabalho contínuo	
+	Não define papéis	
+	Entrega ao término da tarefa ( contínua )	
+	Prioricação contínua sem a necessidade de reuniões formais
+	
+-> Crud
+	Sprint ( ciclos )
+	Define papéis
+	Entrega no final da sprint
+	Exige planejamento no inicio de cada sprint

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Kanban estilo Azure</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body {
+  background: #f4f6f9;
+  font-family: Arial;
+}
+
+.board {
+  display: flex;
+  gap: 15px;
+  padding: 20px;
+}
+
+.column {
+  flex: 1;
+  background: #e5e7eb;
+  border-radius: 10px;
+  padding: 10px;
+  min-height: 400px;
+}
+
+.column h5 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.card-item {
+  background: white;
+  border-left: 5px solid #0078d4;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: grab;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.card-body {
+  display: none;
+  margin-top: 10px;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9fafb;
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.progress {
+  height: 6px;
+  margin-top: 5px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container mt-3">
+  <h3>Kanban</h3>
+  <button class="btn btn-primary" onclick="addCard()">+ Nova História</button>
+</div>
+
+<div class="board">
+
+  <div class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <h5>A Fazer</h5>
+  </div>
+
+  <div class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <h5>Execução</h5>
+  </div>
+
+  <div class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <h5>Validação</h5>
+  </div>
+
+  <div class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <h5>Finalizado</h5>
+  </div>
+
+</div>
+
+<script>
+let dragged = null;
+
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  dragged = ev.currentTarget;
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  const column = ev.target.closest(".column");
+  if (column) column.appendChild(dragged);
+}
+
+// Criar história
+function addCard() {
+  const title = prompt("Nome da história:");
+  if (!title) return;
+
+  const card = document.createElement("div");
+  card.className = "card-item";
+  card.draggable = true;
+  card.ondragstart = drag;
+
+  card.innerHTML = `
+    <div class="card-header">
+      <span class="card-title">${title}</span>
+      <span onclick="toggleCard(this)">▼</span>
+    </div>
+
+    <div class="progress">
+      <div class="progress-bar bg-success" style="width:0%"></div>
+    </div>
+
+    <div class="card-body">
+      <div class="tasks"></div>
+
+      <div class="mt-2">
+        <input type="text" placeholder="Nome da tarefa" class="form-control form-control-sm mb-1 task-name">
+        <input type="text" placeholder="Tempo (ex: 1h)" class="form-control form-control-sm mb-1 task-time">
+        <button class="btn btn-sm btn-success w-100 add-task">Adicionar tarefa</button>
+      </div>
+    </div>
+  `;
+
+  const body = card.querySelector(".card-body");
+  const tasksDiv = card.querySelector(".tasks");
+  const btn = card.querySelector(".add-task");
+
+  btn.onclick = () => {
+    const name = card.querySelector(".task-name").value;
+    const time = card.querySelector(".task-time").value;
+
+    if (!name) return;
+
+    const task = document.createElement("div");
+    task.className = "task";
+
+    task.innerHTML = `
+      <div>
+        <input type="checkbox" onchange="updateProgress(this)">
+        ${name} <small class="text-muted">(${time || "-"})</small>
+      </div>
+    `;
+
+    tasksDiv.appendChild(task);
+
+    card.querySelector(".task-name").value = "";
+    card.querySelector(".task-time").value = "";
+
+    updateProgress(task.querySelector("input"));
+  };
+
+  document.querySelector(".column").appendChild(card);
+}
+
+// Expandir / recolher
+function toggleCard(el) {
+  const body = el.closest(".card-item").querySelector(".card-body");
+  body.style.display = body.style.display === "block" ? "none" : "block";
+}
+
+// Atualizar progresso
+function updateProgress(checkbox) {
+  const card = checkbox.closest(".card-item");
+  const tasks = card.querySelectorAll(".task input");
+  const checked = card.querySelectorAll(".task input:checked");
+
+  const percent = tasks.length ? (checked.length / tasks.length) * 100 : 0;
+
+  card.querySelector(".progress-bar").style.width = percent + "%";
+}
+</script>
+
+</body>
+</html>
