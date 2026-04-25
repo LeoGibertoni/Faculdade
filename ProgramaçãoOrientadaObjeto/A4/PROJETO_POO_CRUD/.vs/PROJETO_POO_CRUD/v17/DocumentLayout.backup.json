@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\0220482422001\\source\\repos\\PROJETO_POO_CRUD\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F109F718-6943-46D6-A2BD-55801ABF7E4F}|PROJETO_POO_CRUD\\PROJETO_POO_CRUD.csproj|c:\\users\\0220482422001\\source\\repos\\projeto_poo_crud\\projeto_poo_crud\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F109F718-6943-46D6-A2BD-55801ABF7E4F}|PROJETO_POO_CRUD\\PROJETO_POO_CRUD.csproj|solutionrelative:projeto_poo_crud\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F109F718-6943-46D6-A2BD-55801ABF7E4F}|PROJETO_POO_CRUD\\PROJETO_POO_CRUD.csproj|c:\\users\\0220482422001\\source\\repos\\projeto_poo_crud\\projeto_poo_crud\\repository\\alunorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F109F718-6943-46D6-A2BD-55801ABF7E4F}|PROJETO_POO_CRUD\\PROJETO_POO_CRUD.csproj|solutionrelative:projeto_poo_crud\\repository\\alunorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F109F718-6943-46D6-A2BD-55801ABF7E4F}|PROJETO_POO_CRUD\\PROJETO_POO_CRUD.csproj|c:\\users\\0220482422001\\source\\repos\\projeto_poo_crud\\projeto_poo_crud\\models\\aluno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F109F718-6943-46D6-A2BD-55801ABF7E4F}|PROJETO_POO_CRUD\\PROJETO_POO_CRUD.csproj|solutionrelative:projeto_poo_crud\\models\\aluno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AlunoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\0220482422001\\source\\repos\\PROJETO_POO_CRUD\\PROJETO_POO_CRUD\\Repository\\AlunoRepository.cs",
+              "RelativeDocumentMoniker": "PROJETO_POO_CRUD\\Repository\\AlunoRepository.cs",
+              "ToolTip": "C:\\Users\\0220482422001\\source\\repos\\PROJETO_POO_CRUD\\PROJETO_POO_CRUD\\Repository\\AlunoRepository.cs",
+              "RelativeToolTip": "PROJETO_POO_CRUD\\Repository\\AlunoRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T23:03:16.163Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Aluno.cs",
+              "DocumentMoniker": "C:\\Users\\0220482422001\\source\\repos\\PROJETO_POO_CRUD\\PROJETO_POO_CRUD\\Models\\Aluno.cs",
+              "RelativeDocumentMoniker": "PROJETO_POO_CRUD\\Models\\Aluno.cs",
+              "ToolTip": "C:\\Users\\0220482422001\\source\\repos\\PROJETO_POO_CRUD\\PROJETO_POO_CRUD\\Models\\Aluno.cs",
+              "RelativeToolTip": "PROJETO_POO_CRUD\\Models\\Aluno.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T22:59:20.194Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\0220482422001\\source\\repos\\PROJETO_POO_CRUD\\PROJETO_POO_CRUD\\Program.cs",
+              "RelativeDocumentMoniker": "PROJETO_POO_CRUD\\Program.cs",
+              "ToolTip": "C:\\Users\\0220482422001\\source\\repos\\PROJETO_POO_CRUD\\PROJETO_POO_CRUD\\Program.cs",
+              "RelativeToolTip": "PROJETO_POO_CRUD\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T22:56:00.672Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
