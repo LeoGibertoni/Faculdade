@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "x3oOVZXgrXM=",
+  "dgSpecHash": "YlNu5bK0Dfc=",
   "success": true,
-  "projectFilePath": "C:\\Users\\0220482422001\\source\\repos\\PROJETO_POO_CRUD\\PROJETO_POO_CRUD\\PROJETO_POO_CRUD.csproj",
+  "projectFilePath": "C:\\Users\\0220482422001\\Documents\\GitHub\\Faculdade\\ProgramaçãoOrientadaObjeto\\A4\\PROJETO_POO_CRUD\\PROJETO_POO_CRUD\\PROJETO_POO_CRUD.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\0220482422001\\.nuget\\packages\\microsoft.bcl.cryptography\\8.0.0\\microsoft.bcl.cryptography.8.0.0.nupkg.sha512",
     "C:\\Users\\0220482422001\\.nuget\\packages\\microsoft.data.sqlclient\\7.0.1\\microsoft.data.sqlclient.7.0.1.nupkg.sha512",

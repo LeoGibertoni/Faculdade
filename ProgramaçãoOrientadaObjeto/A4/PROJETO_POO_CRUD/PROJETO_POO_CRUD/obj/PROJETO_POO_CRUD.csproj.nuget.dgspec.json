@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\0220482422001\\source\\repos\\PROJETO_POO_CRUD\\PROJETO_POO_CRUD\\PROJETO_POO_CRUD.csproj": {}
+    "C:\\Users\\0220482422001\\Documents\\GitHub\\Faculdade\\ProgramaçãoOrientadaObjeto\\A4\\PROJETO_POO_CRUD\\PROJETO_POO_CRUD\\PROJETO_POO_CRUD.csproj": {}
   },
   "projects": {
-    "C:\\Users\\0220482422001\\source\\repos\\PROJETO_POO_CRUD\\PROJETO_POO_CRUD\\PROJETO_POO_CRUD.csproj": {
+    "C:\\Users\\0220482422001\\Documents\\GitHub\\Faculdade\\ProgramaçãoOrientadaObjeto\\A4\\PROJETO_POO_CRUD\\PROJETO_POO_CRUD\\PROJETO_POO_CRUD.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\0220482422001\\source\\repos\\PROJETO_POO_CRUD\\PROJETO_POO_CRUD\\PROJETO_POO_CRUD.csproj",
+        "projectUniqueName": "C:\\Users\\0220482422001\\Documents\\GitHub\\Faculdade\\ProgramaçãoOrientadaObjeto\\A4\\PROJETO_POO_CRUD\\PROJETO_POO_CRUD\\PROJETO_POO_CRUD.csproj",
         "projectName": "PROJETO_POO_CRUD",
-        "projectPath": "C:\\Users\\0220482422001\\source\\repos\\PROJETO_POO_CRUD\\PROJETO_POO_CRUD\\PROJETO_POO_CRUD.csproj",
+        "projectPath": "C:\\Users\\0220482422001\\Documents\\GitHub\\Faculdade\\ProgramaçãoOrientadaObjeto\\A4\\PROJETO_POO_CRUD\\PROJETO_POO_CRUD\\PROJETO_POO_CRUD.csproj",
         "packagesPath": "C:\\Users\\0220482422001\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\0220482422001\\source\\repos\\PROJETO_POO_CRUD\\PROJETO_POO_CRUD\\obj\\",
+        "outputPath": "C:\\Users\\0220482422001\\Documents\\GitHub\\Faculdade\\ProgramaçãoOrientadaObjeto\\A4\\PROJETO_POO_CRUD\\PROJETO_POO_CRUD\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

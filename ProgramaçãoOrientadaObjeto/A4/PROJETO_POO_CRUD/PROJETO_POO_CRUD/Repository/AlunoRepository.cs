@@ -4,7 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using PROJETO_POO_CRUD.Models;
-using Microsoft.Data.SqlClient; //Instalar nugets (System.Data.SqlClient) os 2 primeiros
+using Microsoft.Data.SqlClient;
+using System.Runtime.CompilerServices; //Instalar nugets (System.Data.SqlClient) os 2 primeiros
 
 namespace PROJETO_POO_CRUD.Repository
 {
@@ -29,6 +30,57 @@ namespace PROJETO_POO_CRUD.Repository
 
                 Console.WriteLine("");
                 Console.WriteLine("Novo aluno cadastrado com sucesso!");
+            }
+        }
+
+        public void Excluir(int ALUNO_ID)
+        {
+            using(SqlConnection con = new SqlConnection(conexao))
+            {
+                string query = "DELETE FROM ALUNO WHERE ALUNO_ID = @ALUNO_ID";
+                SqlCommand command = new SqlCommand(query, con);
+
+                command.Parameters.AddWithValue("@ALUNO_ID", ALUNO_ID);
+
+                con.Open();
+
+                int LinhasAfetadas = command.ExecuteNonQuery();
+
+                if(LinhasAfetadas == 0)
+                {
+                    Console.WriteLine("Aluno não encontrado!");
+                }
+                else
+                {
+                    Console.WriteLine("Aluno excluído com sucesso");
+                }
+            }
+        }
+
+        public List<Aluno> Listar()
+        {
+            List<Aluno> alunos = new List<Aluno>();
+
+            using (SqlConnection con = new SqlConnection(conexao))
+            {
+                string query = "SELECT * FROM ALUNO";
+                SqlCommand command = new SqlCommand(query, con);
+
+                con.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    alunos.Add(new Aluno
+                    {
+                        ALUNO_ID = (int)reader["ALUNO_ID"],
+                        ALUNO_NOME = reader["ALUNO_NOME"].ToString(),
+                        ALUNO_IDADE = (int)reader["ALUNO_IDADE"],
+                        ALUNO_EMAIL = reader["ALUNO_EMAIL"].ToString(),
+                    });
+                }
+
+                return alunos;
             }
         }
     }
