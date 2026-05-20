@@ -18,4 +18,16 @@ router.post('/', async (req, res) => {
     res.json({ message: 'Paciente cadastrado' });
 });
 
+// DELETE /pacientes/:id -> remove paciente by id
+router.delete('/:id', async (req, res) => {
+    const { id } = req.params;
+    try {
+        await db.query('DELETE FROM pacientes WHERE id = $1', [id]);
+        res.json({ message: 'Paciente removido' });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ message: 'Erro ao remover paciente' });
+    }
+});
+
 module.exports = router;

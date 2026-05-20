@@ -19,8 +19,29 @@ function Consultas() {
         try{await axios.post('http://localhost:3001/consultas',{paciente_id,medico_id,data_consulta,observacoes});setPacienteId('');setMedicoId('');setDataConsulta('');setObservacoes('');fetch();}catch(err){console.error(err);alert('Erro')}
     }
 
+    const [editing, setEditing] = useState(null);
+    const [editPaciente, setEditPaciente] = useState('');
+    const [editMedico, setEditMedico] = useState('');
+    const [editData, setEditData] = useState('');
+    const [editObs, setEditObs] = useState('');
+
+    function openEdit(c){
+        setEditing(c);
+        setEditPaciente(c.paciente_id || c.paciente || '');
+        setEditMedico(c.medico_id || c.medico || '');
+        setEditData(c.data_consulta || '');
+        setEditObs(c.observacoes || '');
+    }
+
+    async function saveEdit(){
+        try{
+            await axios.put('http://localhost:3001/consultas/'+editing.id,{paciente_id:editPaciente,medico_id:editMedico,data_consulta:editData,observacoes:editObs});
+            setEditing(null);fetch();
+        }catch(err){console.error(err);alert('Erro')}
+    }
+
     return (
-        <div style={{ padding: 20 }}>
+        <div className="page-content" style={{ padding: 20 }}>
             <h3>Consultas</h3>
 
             <div className="card mb-3 p-3">
@@ -33,6 +54,7 @@ function Consultas() {
                 </form>
             </div>
 
+            <div className="table-responsive">
             <table className="table">
                 <thead>
                     <tr>
@@ -41,6 +63,7 @@ function Consultas() {
                         <th>Médico</th>
                         <th>Data</th>
                         <th>Observações</th>
+                        <th style={{width:160}}>Ações</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -51,10 +74,36 @@ function Consultas() {
                             <td>{c.medico || c.medico_id}</td>
                             <td>{c.data_consulta}</td>
                             <td>{c.observacoes}</td>
+                            <td className="actions-cell">
+                                <button className="btn-action btn-edit me-2" onClick={()=>openEdit(c)}>✏️ Editar</button>
+                                <button className="btn-action btn-delete" onClick={async ()=>{
+                                    if(!confirm('Confirma remover consulta?')) return;
+                                    try{await axios.delete('http://localhost:3001/consultas/'+c.id);fetch();}catch(err){console.error(err);alert('Erro')}
+                                }}>🗑️ Remover</button>
+                            </td>
                         </tr>
                     ))}
                 </tbody>
             </table>
+            </div>
+
+            {editing && (
+                <div className="modal-backdrop" style={{position:'fixed',inset:0,display:'flex',alignItems:'center',justifyContent:'center'}}>
+                    <div className="card p-3" style={{width:700}}>
+                        <h5>Editar Consulta</h5>
+                        <div className="row g-2">
+                            <div className="col-md-3"><input className="form-control" placeholder="Paciente ID" value={editPaciente} onChange={e=>setEditPaciente(e.target.value)} /></div>
+                            <div className="col-md-3"><input className="form-control" placeholder="Médico ID" value={editMedico} onChange={e=>setEditMedico(e.target.value)} /></div>
+                            <div className="col-md-3"><input className="form-control" type="date" value={editData} onChange={e=>setEditData(e.target.value)} /></div>
+                            <div className="col-md-3"><input className="form-control" placeholder="Observações" value={editObs} onChange={e=>setEditObs(e.target.value)} /></div>
+                        </div>
+                        <div className="d-flex justify-content-end mt-3" style={{gap:8}}>
+                            <button className="btn btn-secondary" onClick={()=>setEditing(null)}>Cancelar</button>
+                            <button className="btn btn-primary" onClick={saveEdit}>Salvar</button>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }

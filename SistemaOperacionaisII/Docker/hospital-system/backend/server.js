@@ -7,6 +7,9 @@ const medicosRoutes = require('./routes/medicos');
 const consultasRoutes = require('./routes/consultas');
 const prontuariosRoutes = require('./routes/prontuarios');
 const examesRoutes = require('./routes/exames');
+const rhRoutes = require('./routes/rh');
+const financeiroRoutes = require('./routes/financeiro');
+const estoqueRoutes = require('./routes/estoque');
 
 const app = express();
 
@@ -19,6 +22,9 @@ app.use('/medicos', medicosRoutes);
 app.use('/consultas', consultasRoutes);
 app.use('/prontuarios', prontuariosRoutes);
 app.use('/exames', examesRoutes);
+app.use('/rh', rhRoutes);
+app.use('/financeiro', financeiroRoutes);
+app.use('/estoque', estoqueRoutes);
 
 // Root route to confirm backend is running
 app.get('/', (req, res) => {

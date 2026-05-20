@@ -47,6 +47,42 @@ function Dashboard() {
                             </div>
                         </Link>
                     </div>
+                    
+                    <div className="col-md-4 mb-3">
+                        <Link to="/rh" className="text-decoration-none text-dark">
+                            <div className="card h-100">
+                                <div className="card-body">
+                                    <h5 className="card-title">RH</h5>
+                                    <p className="card-text">Gerencie funcionários, departamentos e cargos.</p>
+                                    <button className="btn btn-outline-primary">Abrir</button>
+                                </div>
+                            </div>
+                        </Link>
+                    </div>
+
+                    <div className="col-md-4 mb-3">
+                        <Link to="/financeiro" className="text-decoration-none text-dark">
+                            <div className="card h-100">
+                                <div className="card-body">
+                                    <h5 className="card-title">Financeiro</h5>
+                                    <p className="card-text">Lançamentos, receitas e despesas.</p>
+                                    <button className="btn btn-outline-primary">Abrir</button>
+                                </div>
+                            </div>
+                        </Link>
+                    </div>
+
+                    <div className="col-md-4 mb-3">
+                        <Link to="/estoque" className="text-decoration-none text-dark">
+                            <div className="card h-100">
+                                <div className="card-body">
+                                    <h5 className="card-title">Estoque</h5>
+                                    <p className="card-text">Controle de itens e quantidades.</p>
+                                    <button className="btn btn-outline-primary">Abrir</button>
+                                </div>
+                            </div>
+                        </Link>
+                    </div>
                 </div>
             </div>
         </div>

@@ -24,4 +24,29 @@ router.post('/', async (req, res) => {
     res.json({ message: 'Consulta agendada' });
 });
 
+// DELETE /consultas/:id
+router.delete('/:id', async (req, res) => {
+    const { id } = req.params;
+    try{
+        await db.query('DELETE FROM consultas WHERE id = $1', [id]);
+        res.json({ message: 'Consulta removida' });
+    }catch(err){
+        console.error(err);
+        res.status(500).json({ message: 'Erro ao remover consulta' });
+    }
+});
+
+// PUT /consultas/:id
+router.put('/:id', async (req, res) => {
+    const { id } = req.params;
+    const { paciente_id, medico_id, data_consulta, observacoes } = req.body;
+    try{
+        await db.query('UPDATE consultas SET paciente_id=$1, medico_id=$2, data_consulta=$3, observacoes=$4 WHERE id=$5', [paciente_id, medico_id, data_consulta, observacoes, id]);
+        res.json({ message: 'Consulta atualizada' });
+    }catch(err){
+        console.error(err);
+        res.status(500).json({ message: 'Erro ao atualizar consulta' });
+    }
+});
+
 module.exports = router;

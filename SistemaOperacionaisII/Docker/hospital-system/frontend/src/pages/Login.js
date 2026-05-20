@@ -5,9 +5,11 @@ import { useNavigate, Link } from 'react-router-dom';
 function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [remember, setRemember] = useState(false);
+    const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate();
 
-    async function fazerLogin(e) {
+            async function fazerLogin(e) {
         e.preventDefault();
         try {
             const response = await axios.post('http://localhost:3001/auth/login', {
@@ -17,7 +19,13 @@ function Login() {
 
             // salvar token
             if (response.data && response.data.token) {
-                localStorage.setItem('token', response.data.token);
+                        if(remember){
+                            localStorage.setItem('token', response.data.token);
+                            if(response.data.user) localStorage.setItem('user', JSON.stringify(response.data.user));
+                        }else{
+                            sessionStorage.setItem('token', response.data.token);
+                            if(response.data.user) sessionStorage.setItem('user', JSON.stringify(response.data.user));
+                        }
             }
 
             alert('Login realizado');
@@ -47,7 +55,15 @@ function Login() {
 
                 <div className="mb-3">
                     <label className="form-label">Senha</label>
-                    <input type="password" className="form-control" placeholder="Senha" value={password} onChange={e => setPassword(e.target.value)} />
+                    <div style={{display:'flex',gap:8}}>
+                        <input type={showPassword? 'text':'password'} className="form-control" placeholder="Senha" value={password} onChange={e => setPassword(e.target.value)} />
+                        <button type="button" className="btn btn-outline-secondary" onClick={()=>setShowPassword(s=>!s)}>{showPassword? 'Ocultar':'Ver'}</button>
+                    </div>
+                </div>
+
+                <div className="mb-3 form-check">
+                    <input className="form-check-input" type="checkbox" value="" id="rememberCheck" checked={remember} onChange={e=>setRemember(e.target.checked)} />
+                    <label className="form-check-label" htmlFor="rememberCheck">Lembrar-me</label>
                 </div>
 
                 <div className="d-grid">

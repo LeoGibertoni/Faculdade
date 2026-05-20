@@ -7,6 +7,9 @@ import Medicos from './pages/Medicos';
 import Consultas from './pages/Consultas';
 import Prontuarios from './pages/Prontuarios';
 import Exames from './pages/Exames';
+import Financeiro from './pages/Financeiro';
+import Estoque from './pages/Estoque';
+import RH from './pages/RH';
 import Register from './pages/Register';
 import ChangePassword from './pages/ChangePassword';
 import Header from './components/Header';
@@ -38,6 +41,9 @@ function App() {
                     <Route path="/consultas" element={<Consultas />} />
                     <Route path="/prontuarios" element={<Prontuarios />} />
                     <Route path="/exames" element={<Exames />} />
+                    <Route path="/financeiro" element={<Financeiro />} />
+                    <Route path="/estoque" element={<Estoque />} />
+                    <Route path="/rh" element={<RH />} />
                 </Routes>
             </Layout>
         </BrowserRouter>

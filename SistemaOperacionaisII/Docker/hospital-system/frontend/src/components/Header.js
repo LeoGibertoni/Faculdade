@@ -8,7 +8,14 @@ function Header() {
         navigate('/');
     }
 
-    const nome = 'Administrador';
+    // try to read user from localStorage
+    let nome = 'Administrador';
+    try{
+        // check localStorage first, then sessionStorage
+        let raw = localStorage.getItem('user') || sessionStorage.getItem('user') || 'null';
+        const u = JSON.parse(raw);
+        if(u && u.nome) nome = u.nome;
+    }catch(e){ /* ignore parse errors */ }
 
     return (
         <div className="app-header">
