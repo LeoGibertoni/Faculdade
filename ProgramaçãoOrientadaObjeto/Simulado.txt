@@ -1,0 +1,16 @@
+1- B
+2- C 
+3- D
+4- C
+5- E
+6- B
+7- A ( Certa { C } OutputDir )
+8- B
+9- 
+Create, adiciona dados no BD armazenando ele
+Read, Responsável por ler/receber o dado do BD
+Update, Responsável por atualizar aquele dado editando
+Delete, Remove o dado
+
+10-
+Beneficio de segurança e desempenho
