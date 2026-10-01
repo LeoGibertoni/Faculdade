@@ -1,0 +1,23 @@
+show user
+
+create table LEONARDO_FATECTQ_SCHEMA_JLIPX_Cliente(
+    id NUMBER(5) PRIMARY KEY,
+    nome VARCHAR2(100) NOT NULL,
+    saldo NUMBER(12,2)
+);
+
+create table LEONARDO_FATECTQ_SCHEMA_JLIPX_Produto(
+    codigo NUMBER(5) PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL UNIQUE,
+    estoque NUMBER(3) CHECK (estoque >= 0),
+    preco NUMBER(12,2) CHECK (preco > 0)
+);
+
+create table LEONARDO_FATECTQ_SCHEMA_JLIPX_Pedido(
+    numero NUMBER(5) PRIMARY KEY,
+    data DATE NOT NULL,
+    id_cliente NUMBER(5) NOT NULL REFERENCES LEONARDO_FATECTQ_SCHEMA_JLIPX_Cliente(id),
+    saldo NUMBER(5) NOT NULL REFERENCES LEONARDO_FATECTQ_SCHEMA_JLIPX_Produto(codigo),
+    quantidade NUMBER(3) CHECK (quantidade > 0)
+);
+

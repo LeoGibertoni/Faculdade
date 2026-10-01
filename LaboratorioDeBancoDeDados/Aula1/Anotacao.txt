@@ -1,0 +1,35 @@
+Quais processos de arquitetura oracle:
+
+1. Processos de Usuário (Cliente)
+• O que são: Rodam na aplicação ou na ferramenta do cliente (por exemplo, SQL*Plus, programas Java ou PL/SQL).
+• Função: Geram as requisições de comandos e instruções que serão enviadas ao banco de dados. Eles nunca se comunicam diretamente com os arquivos de dados em disco.
+
+2. Processos de Servidor (Foreground)
+• O que são: Processos criados pela instância do Oracle para atender diretamente às solicitações dos processos de usuário.
+• Função:• Recebem os comandos SQL/PL/SQL enviados pelo usuário.
+	• Fazem a análise sintática (parse) e executam as instruções.
+	• Leem os blocos de dados do Buffer Cache (ou do disco, se necessário).
+	• Retornam os resultados das consultas para o processo do usuário.
+	• Podem operar no modo Dedicado (um processo de servidor para cada usuário) ou Compartilhado (vários usuários dividem um grupo de processos de servidor via Dispatchers).
+
+3. Processos em Segundo Plano (Background)
+• O que são: Rodam de forma assíncrona para gerenciar a memória, realizar manutenções automantizadas, garantir a integridade dos dados e lidar com operações de E/S (I/O).
+• Principais processos obrigatórios (Mandatory Background Processes):
+	• DBWn (Database Writer): Grava os blocos de dados modificados (dirty buffers) que estão na memória (SGA) para os arquivos de dados físicos (datafiles) no disco.
+	• LGWR (Log Writer): Grava as entradas de alteração (redo log buffer) para os arquivos de online redo log no disco, garantindo a recuperabilidade.
+	• CKPT (Checkpoint Process): Atualiza os cabeçalhos dos arquivos de dados e os arquivos de controle (control files) para informar o ponto de sincronização (checkpoint) mais recente.
+	• SMON (System Monitor): Realiza a recuperação da instância (instance recovery) em caso de uma queda abrupta e limpa segmentos temporários não utilizados.
+	• PMON / PMAN (Process Monitor / Process Manager): Monitoram os outros processos, limpam recursos deixados por conexões ou processos de usuários que falharam, e registram a instância no listener.
+	• RECO (Recoverer): Resolve transações pendentes em bancos de dados distribuídos.
+	• MMON e MMNL (Manageability Monitor): Coletam estatísticas de desempenho e geram os dados para o Automatic Workload Repository (AWR).
+• Principais processos opcionais (Optional Background Processes):
+	• ARCn (Archiver): Copia os arquivos de online redo log preenchidos para um local de armazenamento de archive logs (fundamental para backups e Oracle Data Guard).
+	• CJQ0 / Jnnn (Job Queue / Workers): Executam tarefas agendadas no banco de dados (Jobs).
+
+Constraints Oracle
+
+PK: Primary Key
+FK: Foreign Key
+NN: Not Null
+CK: Check
+UN: Unique
