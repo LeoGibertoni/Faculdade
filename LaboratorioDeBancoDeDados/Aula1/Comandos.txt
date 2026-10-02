@@ -17,7 +17,67 @@ create table LEONARDO_FATECTQ_SCHEMA_JLIPX_Pedido(
     numero NUMBER(5) PRIMARY KEY,
     data DATE NOT NULL,
     id_cliente NUMBER(5) NOT NULL REFERENCES LEONARDO_FATECTQ_SCHEMA_JLIPX_Cliente(id),
-    saldo NUMBER(5) NOT NULL REFERENCES LEONARDO_FATECTQ_SCHEMA_JLIPX_Produto(codigo),
+    cod_produto NUMBER(5) NOT NULL REFERENCES LEONARDO_FATECTQ_SCHEMA_JLIPX_Produto(codigo),
     quantidade NUMBER(3) CHECK (quantidade > 0)
 );
 
+--Cliente
+insert into LEONARDO_FATECTQ_SCHEMA_JLIPX_Cliente(id, nome, saldo)
+values(1, 'Adriano Candido', 1200);
+insert into LEONARDO_FATECTQ_SCHEMA_JLIPX_Cliente(id, nome, saldo)
+values(2, 'Marisa Aparecida Mendes', 1490);
+
+--(Não crie nomes engraçados, nem piadas)
+--Insira voce mesmo como cliente 3
+--Insira alguém que você conhece como cliente 4
+insert into LEONARDO_FATECTQ_SCHEMA_JLIPX_Cliente(id, nome, saldo)
+values(3, 'Leonardo gibertoni', 10);
+insert into LEONARDO_FATECTQ_SCHEMA_JLIPX_Cliente(id, nome, saldo)
+values(4, 'Mateus da Silva de Oliveira', 9999);
+
+--Produto
+insert into LEONARDO_FATECTQ_SCHEMA_JLIPX_Produto (codigo, nome, estoque, preco)
+values(1234, 'Micro Radiador Lateral', 10, 8900);
+insert into LEONARDO_FATECTQ_SCHEMA_JLIPX_Produto (codigo, nome, estoque, preco)
+values(2345, 'Elevador Bilateral Ajustavel', 7, 2900);
+insert into LEONARDO_FATECTQ_SCHEMA_JLIPX_Produto (codigo, nome, estoque, preco)
+values(3456, 'Ativador Sequencial de Potencia', 10, 13900);
+
+--Insira mais 2 produtos
+--4567, Ativador Radial Ajustavel, 19100
+--5678, Sequenciador Micro Dimensional, 21200
+insert into LEONARDO_FATECTQ_SCHEMA_JLIPX_Produto (codigo, nome, estoque, preco)
+values(4567, 'Ativador Radial Ajustavel', 3, 19100);
+insert into LEONARDO_FATECTQ_SCHEMA_JLIPX_Produto (codigo, nome, estoque, preco)
+values(5678, 'Sequenciador Micro Dimensional', 5, 21200);
+
+--Pedido
+--Inserindo os Relacionamentos
+insert into LEONARDO_FATECTQ_SCHEMA_JLIPX_Pedido(numero, data, id_cliente, cod_produto, quantidade)
+values(1, TO_DATE('10/09/2026', 'DD/MM/YYYY'), 1, 1234, 3);
+insert into LEONARDO_FATECTQ_SCHEMA_JLIPX_Pedido(numero, data, id_cliente, cod_produto, quantidade)
+values(2, TO_DATE('20/09/2026', 'DD/MM/YYYY'), 2, 2345, 1);
+
+--Insira um pedido do cliente 3 para produto 3456
+--Insira um pedido do cliente 4 para o produto 4567
+insert into LEONARDO_FATECTQ_SCHEMA_JLIPX_Pedido(numero, data, id_cliente, cod_produto, quantidade)
+values(3, TO_DATE('22/09/2026', 'DD/MM/YYYY'), 3, 3456, 1);
+insert into LEONARDO_FATECTQ_SCHEMA_JLIPX_Pedido(numero, data, id_cliente, cod_produto, quantidade)
+values(4, TO_DATE('25/09/2026', 'DD/MM/YYYY'), 4, 4567, 2);
+
+--Consultas
+--1) Quantos clientes temos?
+select count(*) as "Quantidade de Cliente"
+From LEONARDO_FATECTQ_SCHEMA_JLIPX_Cliente;
+
+--2) Quantos Produtos temos?
+select count(*) as "Quantidade de Produtos"
+From LEONARDO_FATECTQ_SCHEMA_JLIPX_Produto;
+
+--3) Qual o valor total dos saldos dos clientes?
+select SUM(saldo) as "Valor total dos saldos"
+From LEONARDO_FATECTQ_SCHEMA_JLIPX_Cliente;
+
+--4) Qual a quantidade total de produtos dos pedidos?
+select SUM(quantidade) as "Valor total de total de produto nos pedidos"
+From LEONARDO_FATECTQ_SCHEMA_JLIPX_PEDIDO;
